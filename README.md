@@ -1,5 +1,7 @@
 # [603.nu](http://603.nu)
 
+[![Build Status](https://semaphoreci.com/api/v1/jch254/603-nu/branches/master/shields_badge.svg)](https://semaphoreci.com/jch254/603-nu)
+
 Source code for http://603.nu.
 
 ## Build
