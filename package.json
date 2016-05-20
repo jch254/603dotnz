@@ -2,20 +2,26 @@
   "name": "603.nu",
   "version": "0.0.1",
   "description": "603.nu source code",
-  "repository": "https://jch254@bitbucket.org/jch254/603.nu.git",
   "scripts": {
     "build": "static-react components/App.js > dist/index.html"
+  },
+  "author": "Jordan Hornblow <jordan@jch254.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jch254/audio-insights"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
-    "react": "^0.14.7",
-    "rebass": "^0.2.5",
-    "reflexbox": "^1.1.0",
-    "static-react": "^3.1.0",
     "eslint": "^2.7.0",
     "eslint-config-airbnb": "6.2.0",
-    "eslint-plugin-react": "^4.3.0"
+    "eslint-plugin-react": "^4.3.0",
+    "react": "^0.14.7",
+    "react-geomicons": "^2.0.5",
+    "rebass": "^0.2.5",
+    "reflexbox": "^1.1.0",
+    "static-react": "^3.1.0"
   },
   "babel": {
     "presets": [

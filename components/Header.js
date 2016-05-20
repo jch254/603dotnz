@@ -6,10 +6,7 @@ import {
 
 const Header = () => (
   <Banner
-    style={{
-      minHeight: '75vh',
-      backgroundAttachment: 'scroll',
-    }}
+    style={{ minHeight: '75vh', backgroundAttachment: 'scroll' }}
     backgroundImage="./img/Wolf.jpg"
     m={0}
   >
