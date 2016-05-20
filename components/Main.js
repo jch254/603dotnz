@@ -26,7 +26,7 @@ const Main = () => (
       </Block>
       <Section pb={0}>
         <SectionHeader heading="About" href="#about" />
-        <p style={{ fontSize: '20px', margin: 0 }}>
+        <p style={{ fontSize: '20px' }}>
           This is a zone to create and experiment.
           This is a zone to create and experiment.
           This is a zone to create and experiment.
@@ -41,7 +41,7 @@ const Main = () => (
       <Section pb={0}>
         <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
         <Flex wrap gutter={2}>
-          <Card mx={2} width={309}>
+          <Card m={2} width={309}>
             <a href="http://ai.603.nu">
               <CardImage src="./img/AI.png" />
             </a>
@@ -57,7 +57,7 @@ const Main = () => (
               children="Audio insights derived from your Spotify library using React and Redux."
             />
           </Card>
-          <Card mx={2} width={309}>
+          <Card m={2} width={309}>
             <CardImage src="http://lorempixel.com/g/512/384/technics" />
             <Flex>
               <Heading children="Under Development" />
@@ -66,7 +66,7 @@ const Main = () => (
             </Flex>
             <Text small children="Check back soon pls... Cheers cheers!" />
           </Card>
-          <Card mx={2} width={309}>
+          <Card m={2} width={309}>
             <CardImage src="http://lorempixel.com/g/512/384/business/" />
             <Flex>
               <Heading children="In my mind" />
