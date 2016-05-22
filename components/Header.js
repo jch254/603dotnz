@@ -11,7 +11,7 @@ const Header = () => (
     m={0}
   >
     <Heading size={1} big children="603.nu" />
-    <Heading size={2} children="Web Experiments, hey Mozel" />
+    <Heading size={2} children="Web Experiments" />
   </Banner>
 )
 
