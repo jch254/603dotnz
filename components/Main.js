@@ -40,7 +40,7 @@ const Main = () => (
       </Section>
       <Section pb={0}>
         <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
-        <Flex wrap gutter={2}>
+        <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} width={309}>
             <a href="http://ai.603.nu">
               <CardImage src="./img/AI.png" />
