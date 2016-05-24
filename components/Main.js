@@ -42,11 +42,11 @@ const Main = () => (
         <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} width={309}>
-            <a href="http://ai.603.nu">
+            <a href="https://ai.603.nu">
               <CardImage src="./img/AI.png" />
             </a>
             <Flex>
-              <HeadingLink children="Audio Insights" href="http://ai.603.nu" />
+              <HeadingLink children="Audio Insights" href="https://ai.603.nu" />
               <Space auto />
               <a href="https://github.com/jch254/audio-insights" target="_blank">
                 <Icon name="github" width="24px" height="24px" />
