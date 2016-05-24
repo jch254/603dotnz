@@ -52,28 +52,34 @@ const Main = () => (
                 <Icon name="github" width="24px" height="24px" />
               </a>
             </Flex>
-            <Text
-              small
-              children="Audio insights derived from your Spotify library using React and Redux."
-            />
+            <Text small pb={2}>
+              Audio insights derived from your Spotify library using React, Redux and Redux-saga.
+            </Text>
           </Card>
           <Card m={2} width={309}>
-            <CardImage src="http://lorempixel.com/g/512/384/technics" />
+            <a href="https://sp.603.nu">
+              <CardImage src="./img/SP.png" />
+            </a>
+            <Flex>
+              <HeadingLink children="Starter Pack" href="https://sp.603.nu" />
+              <Space auto />
+              <a href="https://github.com/jch254/starter-pack" target="_blank">
+                <Icon name="github" width="24px" height="24px" />
+              </a>
+            </Flex>
+            <Text small>
+              Combines React, Redux and Redux-saga with Auth0's Lock as a starting point for
+              modern web apps with solid authentication.
+            </Text>
+          </Card>
+          <Card m={2} width={309}>
+            <CardImage src="http://lorempixel.com/g/512/384/business/" />
             <Flex>
               <Heading children="Under Development" />
               <Space auto />
               <Icon name="github" width="24px" height="24px" />
             </Flex>
-            <Text small children="Check back soon pls... Cheers cheers!" />
-          </Card>
-          <Card m={2} width={309}>
-            <CardImage src="http://lorempixel.com/g/512/384/business/" />
-            <Flex>
-              <Heading children="In my mind" />
-              <Space auto />
-              <Icon name="github" width="24px" height="24px" />
-            </Flex>
-            <Text small children="Go on... Check back soon." />
+            <Text small pb={3} children="Go on... Check back soon." />
           </Card>
         </Flex>
       </Section>
