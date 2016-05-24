@@ -41,7 +41,7 @@ const Main = () => (
       <Section pb={0}>
         <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
         <Flex align="center" justify="center" wrap gutter={2}>
-          <Card m={2} width={309}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://ai.603.nu">
               <CardImage src="./img/AI.png" />
             </a>
@@ -52,11 +52,11 @@ const Main = () => (
                 <Icon name="github" width="24px" height="24px" />
               </a>
             </Flex>
-            <Text small pb={2}>
+            <Text small>
               Audio insights derived from your Spotify library using React, Redux and Redux-saga.
             </Text>
           </Card>
-          <Card m={2} width={309}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://sp.603.nu">
               <CardImage src="./img/SP.png" />
             </a>
@@ -72,14 +72,14 @@ const Main = () => (
               modern web apps with solid authentication.
             </Text>
           </Card>
-          <Card m={2} width={309}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="./img/Matrix.gif" />
             <Flex>
               <Heading children="Under Development" />
               <Space auto />
               <Icon name="github" width="24px" height="24px" />
             </Flex>
-            <Text small pb={3} children="Go on... Check back soon." />
+            <Text small children="Go on... Check back soon." />
           </Card>
         </Flex>
       </Section>
