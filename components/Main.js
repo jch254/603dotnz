@@ -73,7 +73,7 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} width={309}>
-            <CardImage src="http://lorempixel.com/g/512/384/business/" />
+            <CardImage src="./img/Matrix.gif" />
             <Flex>
               <Heading children="Under Development" />
               <Space auto />
