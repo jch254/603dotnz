@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import {
   Banner,
   Heading,
-} from 'rebass'
+} from 'rebass';
 
 const Header = () => (
   <Banner
@@ -10,9 +10,13 @@ const Header = () => (
     backgroundImage="./img/Wolf.jpg"
     m={0}
   >
-    <Heading size={1} big children="603.nu" />
-    <Heading size={2} children="Web Experiments" />
+    <Heading size={1} big>
+      603.nu
+    </Heading>
+    <Heading size={2}>
+      Web Experiments
+    </Heading>
   </Banner>
-)
+);
 
-export default Header
+export default Header;

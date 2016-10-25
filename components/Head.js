@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react'
+import React, { PropTypes } from 'react';
 
 const Head = ({ title }) => (
   <head>
@@ -8,10 +8,10 @@ const Head = ({ title }) => (
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="./favicon.ico" />
   </head>
-)
-
-export default Head
+);
 
 Head.propTypes = {
   title: PropTypes.string,
-}
+};
+
+export default Head;

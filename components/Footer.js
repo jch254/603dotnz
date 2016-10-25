@@ -10,7 +10,9 @@ const Footer = () => (
   <Box style={{ flex: 'none' }}>
     <Toolbar backgroundColor="white">
       <Space auto />
-      <NavItem color="black" href="https://jch254.com" children="© Jordan Hornblow 2016" />
+      <NavItem color="black" href="https://jch254.com">
+        © Jordan Hornblow 2016
+      </NavItem>
     </Toolbar>
   </Box>
 );

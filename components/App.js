@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import Head from './Head'
-import Header from './Header'
-import Main from './Main'
-import Footer from './Footer'
+import Head from './Head';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 
 const App = () => (
-  <html>
+  <html lang="en">
     <Head title="603.nu | Web Experiments" />
     <body>
       <Header />
@@ -14,6 +14,6 @@ const App = () => (
       <Footer />
     </body>
   </html>
-)
+);
 
-export default App
+export default App;

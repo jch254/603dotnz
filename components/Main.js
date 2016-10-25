@@ -1,6 +1,5 @@
 import React from 'react';
 import { Flex } from 'reflexbox';
-import Icon from 'react-geomicons';
 import {
   Container,
   Heading,
@@ -21,7 +20,9 @@ const Main = () => (
     <Flex column>
       <Block pt={4} mt={3} mb={0}>
         <Media m={0} align="center" img="./img/Goku.png">
-          <Heading size={2} big children="Kia ora" />
+          <Heading size={2} big>
+            Kia ora
+          </Heading>
         </Media>
       </Block>
       <Section pb={0}>
@@ -46,10 +47,12 @@ const Main = () => (
               <CardImage src="./img/AI.png" />
             </a>
             <Flex>
-              <HeadingLink children="Audio Insights" href="https://ai.603.nu" />
+              <HeadingLink href="https://audio-insights.603.nu">
+                Audio Insights
+              </HeadingLink>
               <Space auto />
-              <a href="https://github.com/jch254/audio-insights" target="_blank">
-                <Icon name="github" width="24px" height="24px" />
+              <a href="https://github.com/jch254/audio-insights" target="_blank" rel="noopener noreferrer">
+                GitHub
               </a>
             </Flex>
             <Text small>
@@ -61,25 +64,76 @@ const Main = () => (
               <CardImage src="./img/SP.png" />
             </a>
             <Flex>
-              <HeadingLink children="Starter Pack" href="https://sp.603.nu" />
+              <HeadingLink href="https://sp.603.nu">
+                Starter Pack
+              </HeadingLink>
               <Space auto />
-              <a href="https://github.com/jch254/starter-pack" target="_blank">
-                <Icon name="github" width="24px" height="24px" />
+              <a href="https://github.com/jch254/starter-pack" target="_blank" rel="noopener noreferrer">
+                GitHub
               </a>
             </Flex>
             <Text small>
-              Combines React, Redux and Redux-saga with Auth0's Lock as a starting point for
+              Combines React, Redux and Redux-saga with Auth0&#39;s Lock as a starting point for
               modern web apps with solid authentication.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a href="https://serverless-web-api.603.nu">
+              <CardImage src="./img/SW.png" />
+            </a>
+            <Flex>
+              <HeadingLink href="https://sp.603.nu">
+                Serverless Web API
+              </HeadingLink>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/serverless-es6-dynamodb-webapi"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              A simple web API powered by Serverless (Node.js) and DynamoDB, intended as a starting point for
+              Serverless web APIs
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="./img/Matrix.gif" />
             <Flex>
-              <Heading children="Under Development" />
+              <Heading>
+                Under Development
+              </Heading>
               <Space auto />
-              <Icon name="github" width="24px" height="24px" />
             </Flex>
-            <Text small children="Go on... Check back soon." />
+            <Text small>
+              Check back soon.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <CardImage src="./img/Matrix.gif" />
+            <Flex>
+              <Heading>
+                Under Development
+              </Heading>
+              <Space auto />
+            </Flex>
+            <Text small>
+              Check back soon.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <CardImage src="./img/Matrix.gif" />
+            <Flex>
+              <Heading>
+                Under Development
+              </Heading>
+              <Space auto />
+            </Flex>
+            <Text small>
+              Check back soon.
+            </Text>
           </Card>
         </Flex>
       </Section>
@@ -87,7 +141,7 @@ const Main = () => (
         <Blockquote mt={3} source="Eckhart Tolle">
           Nothing scares the egoic mind more than the unknown, the idea of something new, something
           different. The mind always adheres to the known. The unknown is dangerous because it has
-          no control over it. That's why the mind dislikes and ignores the present moment.
+          no control over it. That&#39;s why the mind dislikes and ignores the present moment.
           Present-moment awareness creates a gap in the stream of mind but also in the past-future
           continuum. Nothing truly new and creative can come into this world except through that
           gap, that clear space of infinite possibility.
@@ -95,6 +149,6 @@ const Main = () => (
       </Section>
     </Flex>
   </Container>
-)
+);
 
-export default Main
+export default Main;

@@ -1,12 +1,10 @@
 # [603.nu](https://603.nu)
 
-[![Build Status](https://semaphoreci.com/api/v1/jch254/603-nu/branches/master/shields_badge.svg)](https://semaphoreci.com/jch254/603-nu)
-
 Source code for https://603.nu.
 
 ## Build
 1. Run the following commands in the app's root directory then check the /dist folder
 ```
-npm install
-npm run build
+yarn install
+yarn run build
 ```
