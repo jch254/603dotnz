@@ -1,5 +1,7 @@
 # [603.nu](https://603.nu)
 
+[Bitbucket Pipelines status](https://bitbucket.org/jch254/603.nu/addon/pipelines/home)
+
 Source code for https://603.nu.
 
 ## Build
