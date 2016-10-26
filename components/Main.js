@@ -43,7 +43,7 @@ const Main = () => (
         <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://ai.603.nu">
+            <a href="https://audio-insights.603.nu">
               <CardImage src="./img/AI.png" />
             </a>
             <Flex>
