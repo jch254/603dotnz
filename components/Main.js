@@ -60,11 +60,11 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://sp.603.nu">
+            <a href="https://starter-pack.603.nu">
               <CardImage src="./img/SP.png" />
             </a>
             <Flex>
-              <HeadingLink href="https://sp.603.nu">
+              <HeadingLink href="https://starter-pack.603.nu">
                 Starter Pack
               </HeadingLink>
               <Space auto />
