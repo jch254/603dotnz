@@ -100,7 +100,9 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="./img/Matrix.gif" />
+            <a href="https://github.com/jch254/terraform-ecs-autoscale-alb">
+              <CardImage src="./img/Matrix.gif" />
+            </a>
             <Flex>
               <HeadingLink href="https://github.com/jch254/terraform-ecs-autoscale-alb">
                 Terraform ECS Demo
