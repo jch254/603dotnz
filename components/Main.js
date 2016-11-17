@@ -102,13 +102,14 @@ const Main = () => (
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="./img/Matrix.gif" />
             <Flex>
-              <Heading>
-                Under Development
-              </Heading>
+              <HeadingLink href="https://github.com/jch254/terraform-ecs-autoscale-alb">
+                Terraform ECS Demo
+              </HeadingLink>
               <Space auto />
             </Flex>
             <Text small>
-              Check back soon.
+              ECS cluster with instance and service autoscaling configured and running behind an
+              ALB with path based routing set up.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
