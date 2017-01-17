@@ -82,8 +82,8 @@ const Main = () => (
               <CardImage src="./img/SW.png" />
             </a>
             <Flex>
-              <HeadingLink href="https://sp.603.nu">
-                Serverless Web API
+              <HeadingLink href="https://serverless-web-api.603.nu">
+                Serverless API
               </HeadingLink>
               <Space auto />
               <a
@@ -95,8 +95,8 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              A simple web API powered by Serverless (Node.js) and DynamoDB, intended as a starting point for
-              Serverless web APIs
+              A simple API powered by Serverless (Node.js) and DynamoDB, intended as a starting point for
+              Serverless APIs.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
