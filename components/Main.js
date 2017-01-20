@@ -78,16 +78,16 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://serverless-web-api.603.nu">
+            <a href="https://serverless-api.603.nu">
               <CardImage src="./img/SW.png" />
             </a>
             <Flex>
-              <HeadingLink href="https://serverless-web-api.603.nu">
+              <HeadingLink href="https://serverless-api.603.nu">
                 Serverless API
               </HeadingLink>
               <Space auto />
               <a
-                href="https://github.com/jch254/serverless-es6-dynamodb-webapi"
+                href="https://github.com/jch254/serverless-node-dynamodb-api"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -95,18 +95,23 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              A simple API powered by Serverless (Node.js) and DynamoDB, intended as a starting point for
+              A simple API powered by Serverless, Node.js, DynamoDB and Auth0. Intended as a starting point for
               Serverless APIs.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://github.com/jch254/terraform-ecs-autoscale-alb">
+            <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
               <CardImage src="./img/Matrix.gif" />
             </a>
             <Flex>
-              <HeadingLink href="https://github.com/jch254/terraform-ecs-autoscale-alb">
-                Terraform ECS Demo
-              </HeadingLink>
+              <Heading>
+                <a
+                  href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  Terraform ECS Demo
+                </a>
+              </Heading>
               <Space auto />
             </Flex>
             <Text small>
