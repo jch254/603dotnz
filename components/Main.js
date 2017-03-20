@@ -21,27 +21,39 @@ const Main = () => (
       <Block pt={4} mt={3} mb={0}>
         <Media m={0} align="center" img="./img/Goku.png">
           <Heading size={2} big>
-            Kia ora
+            Kia ora, I&#39;m Jordan.
           </Heading>
         </Media>
       </Block>
       <Section pb={0}>
-        <SectionHeader heading="About" href="#about" />
+        <SectionHeader heading="About" />
         <p style={{ fontSize: '20px' }}>
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment.
-          This is a zone to create and experiment etc.
+          I&#39;m a developer interested in music, productivity and self-improvement with substantial
+          experience working on large-scale SaaS products. I enjoy working across all aspects of product
+          development and believe that a deeper understanding of the stack allows me to architect
+          higher quality/more robust solutions. I love that one can never know too much about technology.
+          There is always an opportunity to continue expanding and applying my knowledge base.
+          This concept of continual improvement is one I have found to be common among all my interests.
+        </p>
+        <p style={{ fontSize: '20px', fontWeight: 'bold' }}>
+          This is my zone to create and experiment.
         </p>
       </Section>
       <Section pb={0}>
-        <SectionHeader description="Few tings" heading="Experiments" href="#experiments" />
+        <SectionHeader mt={0} description="Successful experiments" heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a href="https://scratchpad.zone">
+              <CardImage src="./img/Scratchpad.png" />
+            </a>
+            <HeadingLink href="https://scratchpad.zone">
+              Scratchpad
+            </HeadingLink>
+            <Text small>
+              Scratchpad is an organized repository for ideas, quotes, anecdotes, observations and information
+              you come across during your quest through life.
+            </Text>
+          </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://audio-insights.603.nu">
               <CardImage src="./img/AI.png" />
@@ -101,19 +113,16 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
-              <CardImage src="./img/Matrix.gif" />
+              <CardImage src="./img/TF.png" />
             </a>
-            <Flex>
-              <Heading>
-                <a
-                  href="https://github.com/jch254/terraform-ecs-autoscale-alb"
-                  target="_blank" rel="noopener noreferrer"
-                >
-                  Terraform ECS Demo
-                </a>
-              </Heading>
-              <Space auto />
-            </Flex>
+            <Heading>
+              <a
+                href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+                target="_blank" rel="noopener noreferrer"
+              >
+                Terraform ECS Demo
+              </a>
+            </Heading>
             <Text small>
               ECS cluster with instance and service autoscaling configured and running behind an
               ALB with path based routing set up.
@@ -131,29 +140,26 @@ const Main = () => (
               Check back soon.
             </Text>
           </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="./img/Matrix.gif" />
-            <Flex>
-              <Heading>
-                Under Development
-              </Heading>
-              <Space auto />
-            </Flex>
-            <Text small>
-              Check back soon.
-            </Text>
-          </Card>
         </Flex>
       </Section>
-      <Section pb={0}>
-        <Blockquote mt={3} source="Eckhart Tolle">
-          Nothing scares the egoic mind more than the unknown, the idea of something new, something
-          different. The mind always adheres to the known. The unknown is dangerous because it has
-          no control over it. That&#39;s why the mind dislikes and ignores the present moment.
-          Present-moment awareness creates a gap in the stream of mind but also in the past-future
-          continuum. Nothing truly new and creative can come into this world except through that
-          gap, that clear space of infinite possibility.
-        </Blockquote>
+      <Section>
+        <Block
+          px={2}
+        >
+          <Blockquote
+            href="https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment/dp/1577314808"
+            source="Eckhart Tolle"
+          >
+            &quot;Nothing scares the egoic mind more than the unknown, the idea of something new, something
+            different. The mind always adheres to the known. The unknown is dangerous because it has
+            no control over it. That&#39;s why the mind dislikes and ignores the present moment.
+            Present-moment awareness creates a gap in the stream of mind but also in the past-future
+            continuum. Nothing truly new and creative can come into this world except through that
+            gap, that clear space of infinite possibility.&quot;
+          </Blockquote>
+        </Block>
+
+
       </Section>
     </Flex>
   </Container>
