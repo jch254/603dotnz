@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "603.nu source code",
   "scripts": {
-    "build": "static-react components/App.js > dist/index.html"
+    "build": "static-react components/App.js > dist/index.html",
+    "lint": "eslint components || exit 0"
   },
   "author": "Jordan Hornblow <jordan@jch254.com>",
   "license": "MIT",
