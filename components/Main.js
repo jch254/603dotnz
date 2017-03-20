@@ -28,10 +28,10 @@ const Main = () => (
       <Section pb={0}>
         <SectionHeader heading="About" />
         <p style={{ fontSize: '20px' }}>
-          I&#39;m a developer interested in music, productivity and self-improvement with substantial
-          experience working on large-scale SaaS products. I enjoy working across all aspects of product
-          development and believe that a deeper understanding of the stack allows me to architect
-          higher quality/more robust solutions. I love that one can never know too much about technology.
+          I&#39;m a developer interested in music, productivity and self-improvement.
+          I enjoy working across all aspects of product development and believe that a deeper
+          understanding of the stack allows me to architect higher quality/more robust solutions.
+          I love that one can never know too much about technology.
           There is always an opportunity to continue expanding and applying my knowledge base.
           This concept of continual improvement is one I have found to be common among all my interests.
         </p>
