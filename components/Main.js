@@ -143,9 +143,7 @@ const Main = () => (
         </Flex>
       </Section>
       <Section>
-        <Block
-          px={2}
-        >
+        <Block>
           <Blockquote
             href="https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment/dp/1577314808"
             source="Eckhart Tolle"
@@ -158,8 +156,6 @@ const Main = () => (
             gap, that clear space of infinite possibility.&quot;
           </Blockquote>
         </Block>
-
-
       </Section>
     </Flex>
   </Container>
