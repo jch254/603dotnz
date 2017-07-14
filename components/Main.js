@@ -21,7 +21,7 @@ const Main = () => (
       <Block pt={4} mt={3} mb={0}>
         <Media m={0} align="center" img="./img/Goku.png">
           <Heading size={2} big>
-            Kia ora, I&#39;m Jordan.
+            Kia ora, <a href="https://jch254.com" style={{ textDecoration: 'underline' }}>I&#39;m Jordan</a>.
           </Heading>
         </Media>
       </Block>
@@ -42,6 +42,25 @@ const Main = () => (
       <Section pb={0}>
         <SectionHeader mt={0} description="Successful experiments" heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
+              <CardImage src="./img/Scope.jpg" />
+            </a>
+            <Flex>
+              <Heading>
+                <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
+                  Scope
+                </a>
+              </Heading>
+              <Space auto />
+              <a href="https://github.com/jch254/scope-lex-handler" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              Scope is a Facebook Messenger bot that identifies songs from lyrics/titles. Powered by AWS Lex and Lambda.
+            </Text>
+          </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://scratchpad.zone">
               <CardImage src="./img/Scratchpad.png" />
@@ -68,15 +87,16 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              Audio insights derived from your Spotify library using React, Redux and Redux-saga.
+              Insights, visualizations and recommendations derived from your Spotify library.
+              Powered by React, Redux and Redux-saga.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://starter-pack.603.nu">
+            <a href="https://starter-pack-typescript.603.nu">
               <CardImage src="./img/SP.png" />
             </a>
             <Flex>
-              <HeadingLink href="https://starter-pack.603.nu">
+              <HeadingLink href="https://starter-pack-typescript.603.nu">
                 Starter Pack
               </HeadingLink>
               <Space auto />
@@ -116,16 +136,37 @@ const Main = () => (
               <CardImage src="./img/TF.png" />
             </a>
             <Heading>
-              <a
-                href="https://github.com/jch254/terraform-ecs-autoscale-alb"
-                target="_blank" rel="noopener noreferrer"
-              >
+              <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
                 Terraform ECS Demo
               </a>
             </Heading>
             <Text small>
-              ECS cluster with instance and service autoscaling configured and running behind an
+              AWS ECS cluster with instance and service autoscaling configured and running behind an
               ALB with path based routing set up.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <CardImage src="./img/Matrix.gif" />
+            <Flex>
+              <Heading>
+                Under Development
+              </Heading>
+              <Space auto />
+            </Flex>
+            <Text small>
+              Check back soon.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <CardImage src="./img/Matrix.gif" />
+            <Flex>
+              <Heading>
+                Under Development
+              </Heading>
+              <Space auto />
+            </Flex>
+            <Text small>
+              Check back soon.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -144,16 +185,9 @@ const Main = () => (
       </Section>
       <Section>
         <Block>
-          <Blockquote
-            href="https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment/dp/1577314808"
-            source="Eckhart Tolle"
-          >
-            &quot;Nothing scares the egoic mind more than the unknown, the idea of something new, something
-            different. The mind always adheres to the known. The unknown is dangerous because it has
-            no control over it. That&#39;s why the mind dislikes and ignores the present moment.
-            Present-moment awareness creates a gap in the stream of mind but also in the past-future
-            continuum. Nothing truly new and creative can come into this world except through that
-            gap, that clear space of infinite possibility.&quot;
+          <Blockquote href="https://www.youtube.com/watch?v=knZ9R1q5QzE" source="Skepta">
+            &quot;Everyday, bro, we&#39;ve gotta stay battling, gotta stay fighting, gotta stay striving,
+            gotta stay dreaming, gotta stay believing, gotta stay scheming...&quot;
           </Blockquote>
         </Block>
       </Section>

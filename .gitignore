@@ -3,3 +3,4 @@ npm-debug.log
 .DS_Store
 index.html
 yarn-error.log
+.history/
