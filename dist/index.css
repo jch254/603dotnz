@@ -32,7 +32,7 @@ button:focus {
     background: #db1734;
   }
   25% {
-    background: #dbbe17;
+    background: #db5c17;
   }
   50% {
     background: #34db17;
@@ -41,7 +41,7 @@ button:focus {
     background: #17dbbe;
   }
   100% {
-    background: #5c17db;
+    background: #be17db;
   }
 }
 @keyframes color-change-5x {
@@ -49,7 +49,7 @@ button:focus {
     background: #db1734;
   }
   25% {
-    background: #dbbe17;
+    background: #db5c17;
   }
   50% {
     background: #34db17;
@@ -58,6 +58,6 @@ button:focus {
     background: #17dbbe;
   }
   100% {
-    background: #5c17db;
+    background: #be17db;
   }
 }
