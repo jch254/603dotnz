@@ -5,7 +5,7 @@ import {
 } from 'rebass';
 
 const Header = () => (
-  <div className="color-change-5x">
+  <div className="color-change-4x">
     <Banner
       style={{ minHeight: '66vh', background: 'none' }}
       m={0}

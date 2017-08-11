@@ -22,42 +22,37 @@ button:focus {
   outline: none;
 }
 
-.color-change-5x {
-	-webkit-animation: color-change-5x 8s linear infinite alternate both !important;
-	        animation: color-change-5x 8s linear infinite alternate both !important;
+.color-change-4x {
+	-webkit-animation: color-change-4x 6s linear infinite alternate both;
+	        animation: color-change-4x 6s linear infinite alternate both;
 }
 
- @-webkit-keyframes color-change-5x {
+ @-webkit-keyframes color-change-4x {
   0% {
     background: #db1734;
   }
-  25% {
-    background: #db5c17;
+  33.3333% {
+    background: #be17db;
   }
-  50% {
-    background: #34db17;
-  }
-  75% {
+  66.666% {
     background: #17dbbe;
   }
   100% {
-    background: #be17db;
+    background: #34db17;
   }
 }
-@keyframes color-change-5x {
+@keyframes color-change-4x {
   0% {
     background: #db1734;
   }
-  25% {
-    background: #db5c17;
+  33.3333% {
+    background: #be17db;
   }
-  50% {
-    background: #34db17;
-  }
-  75% {
+  66.666% {
     background: #17dbbe;
   }
   100% {
-    background: #be17db;
+    background: #34db17;
   }
 }
+
