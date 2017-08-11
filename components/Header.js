@@ -5,17 +5,19 @@ import {
 } from 'rebass';
 
 const Header = () => (
-  <Banner
-    style={{ minHeight: '66vh', background: '#DB1734' }}
-    m={0}
-  >
-    <Heading size={1} big>
-      603.nu
-    </Heading>
-    <Heading size={2}>
-      Web Experiments
-    </Heading>
-  </Banner>
+  <div className="color-change-5x">
+    <Banner
+      style={{ minHeight: '66vh', background: 'none' }}
+      m={0}
+    >
+      <Heading size={1} big>
+        603.nu
+      </Heading>
+      <Heading size={2}>
+        Web Experiments
+      </Heading>
+    </Banner>
+  </div>
 );
 
 export default Header;

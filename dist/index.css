@@ -21,3 +21,43 @@ body {
 button:focus {
   outline: none;
 }
+
+.color-change-5x {
+	-webkit-animation: color-change-5x 8s linear infinite alternate both !important;
+	        animation: color-change-5x 8s linear infinite alternate both !important;
+}
+
+ @-webkit-keyframes color-change-5x {
+  0% {
+    background: #db1734;
+  }
+  25% {
+    background: #dbbe17;
+  }
+  50% {
+    background: #34db17;
+  }
+  75% {
+    background: #17dbbe;
+  }
+  100% {
+    background: #5c17db;
+  }
+}
+@keyframes color-change-5x {
+  0% {
+    background: #db1734;
+  }
+  25% {
+    background: #dbbe17;
+  }
+  50% {
+    background: #34db17;
+  }
+  75% {
+    background: #17dbbe;
+  }
+  100% {
+    background: #5c17db;
+  }
+}
