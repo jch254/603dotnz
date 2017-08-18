@@ -188,18 +188,6 @@ const Main = () => (
               Check back soon.
             </Text>
           </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="./img/Matrix.gif" />
-            <Flex>
-              <Heading>
-                Under Development
-              </Heading>
-              <Space auto />
-            </Flex>
-            <Text small>
-              Check back soon.
-            </Text>
-          </Card>
         </Flex>
       </Section>
       <Section>
