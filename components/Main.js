@@ -43,6 +43,25 @@ const Main = () => (
         <SectionHeader mt={0} description="Successful experiments" heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a href="https://buildpipeline-prod.603.nu">
+              <CardImage src="./img/BuildPipeline.png" />
+            </a>
+            <Flex>
+              <Heading>
+                <a href="https://buildpipeline-prod.603.nu">
+                  BuildPipeline
+                </a>
+              </Heading>
+              <Space auto />
+              <a href="https://github.com/jch254/buildpipeline" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              AWS-powered serverless build, test and deploy pipeline ft. multiple environments.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
               <CardImage src="./img/Scope.jpg" />
             </a>
