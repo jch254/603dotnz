@@ -21,7 +21,7 @@ const Main = () => (
       <Block pt={4} mt={3} mb={0}>
         <Media m={0} align="center" img="./img/Goku.png">
           <Heading size={2} big>
-            Kia ora, <a href="https://jch254.com" style={{ textDecoration: 'underline' }}>I&#39;m Jordan</a>.
+            Kia ora, <a href="https://jch254.com" style={{ textDecoration: 'underline' }}>I&#39;m Jordan</a>
           </Heading>
         </Media>
       </Block>
@@ -31,12 +31,9 @@ const Main = () => (
           I&#39;m a developer interested in music, productivity and self-improvement.
           I enjoy working across all aspects of product development and believe that a deeper
           understanding of the stack allows me to architect higher quality/more robust solutions.
-          I love that one can never know too much about technology.
-          There is always an opportunity to continue expanding and applying my knowledge base.
-          This concept of continual improvement is one I have found to be common among all my interests.
-        </p>
-        <p style={{ fontSize: '20px', fontWeight: 'bold' }}>
-          This is my zone to create and experiment.
+          I love that one can never know too much about technology. There is always an opportunity
+          to continue expanding and applying my knowledge base. <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
+            This is my zone to experiment with internet technologies.</span>
         </p>
       </Section>
       <Section pb={0}>
@@ -46,7 +43,7 @@ const Main = () => (
             <a href="https://buildpipeline-prod.603.nu">
               <CardImage src="./img/BuildPipeline.png" />
             </a>
-            <Flex>
+            <Flex align="center">
               <Heading>
                 <a href="https://buildpipeline-prod.603.nu">
                   BuildPipeline
@@ -58,20 +55,25 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              AWS-powered serverless build, test and deploy pipeline ft. multiple environments.
+              BuildPipeline is an AWS-powered serverless build, test and deploy pipeline ft. multiple
+              environments (test and production).
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
               <CardImage src="./img/Scope.jpg" />
             </a>
-            <Flex>
+            <Flex align="center">
               <Heading>
                 <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
                   Scope
                 </a>
               </Heading>
               <Space auto />
+              <a href="https://www.producthunt.com/posts/scope-5" target="_blank" rel="noopener noreferrer">
+                Product Hunt
+              </a>
+              &nbsp;|&nbsp;
               <a href="https://github.com/jch254/scope-lex-handler" target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
@@ -96,7 +98,7 @@ const Main = () => (
             <a href="https://audio-insights.603.nu">
               <CardImage src="./img/AI.png" />
             </a>
-            <Flex>
+            <Flex align="center">
               <HeadingLink href="https://audio-insights.603.nu">
                 Audio Insights
               </HeadingLink>
@@ -114,7 +116,7 @@ const Main = () => (
             <a href="https://starter-pack-typescript.603.nu">
               <CardImage src="./img/SP.png" />
             </a>
-            <Flex>
+            <Flex align="center">
               <HeadingLink href="https://starter-pack-typescript.603.nu">
                 Starter Pack
               </HeadingLink>
@@ -124,15 +126,15 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              Combines React, Redux and Redux-saga with Auth0&#39;s Lock as a starting point for
-              modern web apps with solid authentication.
+              Combines React, Redux, Redux-saga and TypeScript with Auth0&#39;s Lock as a starting point
+              for modern web apps with solid authentication.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://serverless-api.603.nu">
               <CardImage src="./img/SA.png" />
             </a>
-            <Flex>
+            <Flex align="center">
               <HeadingLink href="https://serverless-api.603.nu">
                 Serverless API
               </HeadingLink>
@@ -146,8 +148,8 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              A simple API powered by Serverless, Node.js, DynamoDB and Auth0. Intended as a starting point for
-              Serverless APIs.
+              API powered by Serverless, TypeScript, Webpack and DynamoDB, intended as a starting
+              point for Serverless APIs.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -166,7 +168,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="./img/Matrix.gif" />
-            <Flex>
+            <Flex align="center">
               <Heading>
                 Under Development
               </Heading>
@@ -178,7 +180,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="./img/Matrix.gif" />
-            <Flex>
+            <Flex align="center">
               <Heading>
                 Under Development
               </Heading>

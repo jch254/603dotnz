@@ -11,7 +11,7 @@ const Header = () => (
       m={0}
     >
       <Heading size={1} big>
-        603.nu
+        603.nz
       </Heading>
       <Heading size={2}>
         Web Experiments

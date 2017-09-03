@@ -1,7 +1,7 @@
 {
-  "name": "603.nu",
+  "name": "603.nz",
   "version": "1.0.0",
-  "description": "603.nu source code",
+  "description": "603.nz source code",
   "scripts": {
     "build": "static-react components/App.js > dist/index.html",
     "lint": "eslint components || exit 0"
@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jch254/603.nu"
+    "url": "https://github.com/jch254/603.nz"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
