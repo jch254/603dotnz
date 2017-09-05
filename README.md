@@ -1,7 +1,5 @@
 # [603.nz](http://603.nz)
 
-[Bitbucket Pipelines status](https://bitbucket.org/jch254/603.nu/addon/pipelines/home)
-
 Source code for http://603.nz.
 
 ## Build
@@ -10,3 +8,8 @@ Source code for http://603.nz.
 yarn install
 yarn run build
 ```
+
+## Deployment/Infrastructure
+
+Refer to the [/infrastructure](./infrastructure) directory.
+

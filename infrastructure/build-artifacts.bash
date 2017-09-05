@@ -1,5 +1,7 @@
 #!/bin/bash -ex
 
-yarn install
-export NODE_ENV=production
+echo Building artifacts...
+
 yarn run build
+
+echo Finished building artifacts

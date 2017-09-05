@@ -4,3 +4,6 @@ npm-debug.log
 index.html
 yarn-error.log
 .history/
+.terraform/
+*.tfstate*
+*.tfplan*

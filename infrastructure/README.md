@@ -2,7 +2,7 @@
 
 This project is deployed to AWS on S3. CloudFront is used as a CDN. Route 53 is used for DNS.
 
---
+---
 
 ### Deployment Prerequisites
 
