@@ -10,7 +10,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jch254/603.nz"
+    "url": "https://github.com/jch254/603dotnz"
   },
   "dependencies": {
     "moment": "^2.18.0"
