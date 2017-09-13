@@ -44,7 +44,7 @@ resource "aws_iam_role_policy" "codebuild_policy" {
 }
 
 module "codebuild_project" {
-  source = "github.com/jch254/terraform-modules//codebuild-project"
+  source = "github.com/jch254/terraform-modules//codebuild-project?ref=1.0.0"
 
   name = "${var.name}"
   codebuild_role_arn = "${aws_iam_role.codebuild_role.arn}"
@@ -56,9 +56,10 @@ module "codebuild_project" {
 }
 
 module "webapp" {
-  source = "github.com/jch254/terraform-modules//web-app"
+  source = "github.com/jch254/terraform-modules//web-app?ref=1.0.0"
 
-  dns_name = "${var.dns_name}"
+  bucket_name = "${var.bucket_name}"
+  dns_names = "${var.dns_names}"
   route53_zone_id = "${var.route53_zone_id}"
   acm_arn = "${var.acm_arn}"
 }
