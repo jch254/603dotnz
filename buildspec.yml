@@ -32,6 +32,8 @@ phases:
       - export AWS_SECRET_ACCESS_KEY=`curl --silent http://169.254.170.2:80$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI | jq -r '.SecretAccessKey'`
       - export AWS_SESSION_TOKEN=`curl --silent http://169.254.170.2:80$AWS_CONTAINER_CREDENTIALS_RELATIVE_URI | jq -r '.Token'`
 
+      - export GA_ID=$(aws ssm get-parameters --region $TF_VAR_region --name "/603dotnz/ga-id" --with-decryption --query Parameters[0].Value --output text)
+
   build:
     commands:
       - ./infrastructure/build-artifacts.bash
