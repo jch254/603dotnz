@@ -1,4 +1,4 @@
-# [603.nz](http://603.nz)
+# [603dotnz](http://603.nz)
 
 Source code for http://603.nz.
 
