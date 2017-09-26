@@ -95,11 +95,11 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://audio-insights.603.nu">
+            <a href="https://audio-insights.603.nz">
               <CardImage src="./img/AI.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://audio-insights.603.nu">
+              <HeadingLink href="https://audio-insights.603.nz">
                 Audio Insights
               </HeadingLink>
               <Space auto />
