@@ -40,12 +40,12 @@ const Main = () => (
         <SectionHeader mt={0} description="Successful experiments" heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://buildpipeline-prod.603.nu">
+            <a href="https://buildpipeline-prod.603.nz">
               <CardImage src="./img/BuildPipeline.png" />
             </a>
             <Flex align="center">
               <Heading>
-                <a href="https://buildpipeline-prod.603.nu">
+                <a href="https://buildpipeline-prod.603.nz">
                   BuildPipeline
                 </a>
               </Heading>
@@ -113,11 +113,11 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://starter-pack-typescript.603.nu">
+            <a href="https://starter-pack-typescript.603.nz">
               <CardImage src="./img/SP.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://starter-pack-typescript.603.nu">
+              <HeadingLink href="https://starter-pack-typescript.603.nz">
                 Starter Pack
               </HeadingLink>
               <Space auto />
@@ -131,11 +131,11 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://serverless-api.603.nu">
+            <a href="https://serverless-api.603.nz">
               <CardImage src="./img/SA.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://serverless-api.603.nu">
+              <HeadingLink href="https://serverless-api.603.nz">
                 Serverless API
               </HeadingLink>
               <Space auto />
