@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 const App = () => (
   <html lang="en">
-    <Head title="603.nz | Web Experiments" />
+    <Head title="603.nz | Internet Projects" />
     <body>
       <Header />
       <Main />

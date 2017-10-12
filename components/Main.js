@@ -29,15 +29,15 @@ const Main = () => (
         <SectionHeader heading="About" />
         <p style={{ fontSize: '20px' }}>
           I&#39;m a developer interested in music, productivity and self-improvement.
-          I enjoy working across all aspects of product development and believe that a deeper
-          understanding of the stack allows me to architect higher quality/more robust solutions.
+          I enjoy working across all aspects of product development - from 0 to 100, real quick. I
+          believe that a deeper understanding of the stack allows me to craft higher quality and more robust solutions.
           I love that one can never know too much about technology. There is always an opportunity
           to continue expanding and applying my knowledge base. <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-            This is my zone to experiment with internet technologies.</span>
+            This is a zone to share Internet-powered/related projects.</span>
         </p>
       </Section>
       <Section pb={0}>
-        <SectionHeader mt={0} description="Successful experiments" heading="Projects" />
+        <SectionHeader mt={0} heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://buildpipeline-prod.603.nz">

@@ -11,10 +11,10 @@ const Header = () => (
       m={0}
     >
       <Heading size={1} big>
-        603.nz
+        603.NZ
       </Heading>
       <Heading size={2}>
-        Web Experiments
+        Internet Projects
       </Heading>
     </Banner>
   </div>
