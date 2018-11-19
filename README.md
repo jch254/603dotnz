@@ -12,4 +12,3 @@ yarn run build
 ## Deployment/Infrastructure
 
 Refer to the [/infrastructure](./infrastructure) directory.
-
