@@ -56,3 +56,11 @@ variable "route53_zone_id" {
 variable "acm_arn" {
   description = "ARN of ACM SSL certificate"
 }
+
+variable "privacy_policy_subdomain" {
+  description = "Privacy polcy DNS Name (e.g. privacy.example.com)"
+}
+
+variable "privacy_policy_destination" {
+  description = "Where privacy policy is hosted"
+}

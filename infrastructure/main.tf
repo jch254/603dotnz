@@ -69,3 +69,12 @@ module "webapp" {
   route53_zone_id = "${var.route53_zone_id}"
   acm_arn         = "${var.acm_arn}"
 }
+
+module "webapp-redirect" {
+  source = "github.com/jch254/terraform-modules//web-app-redirect?ref=1.0.4"
+
+  source_dns_name      = "${var.privacy_policy_subdomain}"
+  destination_dns_name = "${var.privacy_policy_destination}"
+  route53_zone_id      = "${var.route53_zone_id}"
+  acm_arn              = "${var.acm_arn}"
+}
