@@ -194,7 +194,7 @@ const Main = () => (
       </Section>
       <Section>
         <Block>
-          <Blockquote href="https://www.youtube.com/watch?v=knZ9R1q5QzE" source="Skepta">
+          <Blockquote href="https://www.youtube.com/watch?v=BtpHbpuZT-c" source="Skepta">
             &quot;Everyday, bro, we&#39;ve gotta stay battling, gotta stay fighting, gotta stay striving,
             gotta stay dreaming, gotta stay believing, gotta stay scheming...&quot;
           </Blockquote>
