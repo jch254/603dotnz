@@ -126,7 +126,7 @@ const Main = () => (
               </a>
             </Flex>
             <Text small>
-              Combines React, Redux, Redux-saga and TypeScript with Auth0&#39;s Lock as a starting point
+              Combines React, Redux, Redux-saga and TypeScript with Auth0 as a starting point
               for modern web apps with solid authentication.
             </Text>
           </Card>
