@@ -19,7 +19,7 @@ const Main = () => (
   <Container pb={3}>
     <Flex column>
       <Block pt={4} mt={3} mb={0}>
-        <Media m={0} align="center" img="./img/Goku.png">
+        <Media m={0} align="center" img="/img/Goku.png">
           <Heading size={2} big>
             Kia ora, <a href="https://jch254.com" style={{ textDecoration: 'underline' }}>I&#39;m Jordan</a>
           </Heading>
@@ -41,7 +41,7 @@ const Main = () => (
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://buildpipeline-prod.603.nz">
-              <CardImage src="./img/BuildPipeline.png" />
+              <CardImage src="/img/BuildPipeline.png" />
             </a>
             <Flex align="center">
               <Heading>
@@ -61,7 +61,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://m.me/scopebot" target="_blank" rel="noopener noreferrer">
-              <CardImage src="./img/Scope.jpg" />
+              <CardImage src="/img/Scope.jpg" />
             </a>
             <Flex align="center">
               <Heading>
@@ -84,7 +84,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://scratchpad.zone">
-              <CardImage src="./img/Scratchpad.png" />
+              <CardImage src="/img/Scratchpad.png" />
             </a>
             <HeadingLink href="https://scratchpad.zone">
               Scratchpad
@@ -96,7 +96,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://audio-insights.603.nz">
-              <CardImage src="./img/AI.png" />
+              <CardImage src="/img/AI.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="https://audio-insights.603.nz">
@@ -114,7 +114,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://starter-pack-typescript.603.nz">
-              <CardImage src="./img/SP.png" />
+              <CardImage src="/img/SP.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="https://starter-pack-typescript.603.nz">
@@ -132,7 +132,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://serverless-api.603.nz">
-              <CardImage src="./img/SA.png" />
+              <CardImage src="/img/SA.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="https://serverless-api.603.nz">
@@ -154,7 +154,7 @@ const Main = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
-              <CardImage src="./img/TF.png" />
+              <CardImage src="/img/TF.png" />
             </a>
             <Heading>
               <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
@@ -167,7 +167,7 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="./img/Matrix.gif" />
+            <CardImage src="/img/Matrix.gif" />
             <Flex align="center">
               <Heading>
                 Under Development
@@ -179,7 +179,7 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="./img/Matrix.gif" />
+            <CardImage src="/img/Matrix.gif" />
             <Flex align="center">
               <Heading>
                 Under Development
