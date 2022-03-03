@@ -158,7 +158,7 @@ const Main = () => (
             </a>
             <Heading>
               <a href="https://github.com/jch254/discogs-market-monitor" target="_blank" rel="noopener noreferrer">
-                Discogs Wantlist Marketplace Monitor
+                Discogs Wantlist Monitor
               </a>
             </Heading>
             <Text small>
