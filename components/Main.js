@@ -153,6 +153,19 @@ const Main = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a href="https://github.com/jch254/discogs-market-monitor" target="_blank" rel="noopener noreferrer">
+              <CardImage src="/img/Wax.jpeg" />
+            </a>
+            <Heading>
+              <a href="https://github.com/jch254/discogs-market-monitor" target="_blank" rel="noopener noreferrer">
+                Discogs Wantlist Marketplace Monitor
+              </a>
+            </Heading>
+            <Text small>
+              Discogs Wantlist Marketplace Monitor saves manually searching through your Discogs wantlist for local listings
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://github.com/jch254/terraform-ecs-autoscale-alb" target="_blank" rel="noopener noreferrer">
               <CardImage src="/img/TF.png" />
             </a>
@@ -164,18 +177,6 @@ const Main = () => (
             <Text small>
               AWS ECS cluster with instance and service autoscaling configured and running behind an
               ALB with path based routing set up.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="/img/Matrix.gif" />
-            <Flex align="center">
-              <Heading>
-                Under Development
-              </Heading>
-              <Space auto />
-            </Flex>
-            <Text small>
-              Check back soon.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
