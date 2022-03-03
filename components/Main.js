@@ -162,7 +162,7 @@ const Main = () => (
               </a>
             </Heading>
             <Text small>
-              Discogs Wantlist Marketplace Monitor saves manually searching through your Discogs wantlist for local listings
+              Saves manually searching through your Discogs wantlist for local listings
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
