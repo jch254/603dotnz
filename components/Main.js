@@ -37,6 +37,7 @@ const Main = () => (
           revel in building applications/systems from the ground up as well as
           maintaining and enhancing pre-existing systems.
           <br />
+          <br />
           <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
             This is a zone to share Internet-powered/related projects.
           </span>
