@@ -28,12 +28,18 @@ const Main = () => (
       <Section pb={0}>
         <SectionHeader heading="About" />
         <p style={{ fontSize: '20px' }}>
-          I&#39;m a developer interested in music, productivity and self-improvement.
-          I enjoy working across all aspects of product development - from 0 to 100, real quick. I
-          believe that a deeper understanding of the stack allows me to craft higher quality and more robust solutions.
-          I love that one can never know too much about technology. There is always an opportunity
-          to continue expanding and applying my knowledge base. <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-            This is a zone to share Internet-powered/related projects.</span>
+          I&#39;m a developer experienced in distributed systems, scalable APIs,
+          micro(mini)services, cloud infrastructure, tearing apart monoliths and
+          integrations. I dabble in a bit of UI work now and then too. Throw me
+          a problem and I'll try to solve it. I believe that a deeper
+          understanding of the stack allows one to architect higher quality/more
+          robust solutions and diagnose/solve bugs/issues more efficiently. I
+          revel in building applications/systems from the ground up as well as
+          maintaining and enhancing pre-existing systems.
+          <br />
+          <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
+            This is a zone to share Internet-powered/related projects.
+          </span>
         </p>
       </Section>
       <Section pb={0}>
