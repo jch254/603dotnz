@@ -63,7 +63,7 @@ module "codebuild_project" {
 }
 
 module "webapp" {
-  source = "github.com/jch254/terraform-modules//web-app?ref=1.0.5"
+  source = "github.com/jch254/terraform-modules//web-app?ref=1.0.8"
 
   bucket_name = var.bucket_name
   dns_names = var.dns_names
