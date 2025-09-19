@@ -1,6 +1,10 @@
-import React, { PropTypes } from 'react';
+import * as React from 'react';
 
-const Head = ({ title }) => (
+interface HeadProps {
+  title: string;
+}
+
+const Head: React.FC<HeadProps> = ({ title }) => (
   <head>
     <meta charSet="utf-8" />
     <title>{title}</title>
@@ -8,7 +12,7 @@ const Head = ({ title }) => (
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/favicon.ico" />
     {
-      process.env.GA_ID &&
+      process.env.GA_ID && (
       <script
         dangerouslySetInnerHTML={{
           __html: `
@@ -20,12 +24,9 @@ const Head = ({ title }) => (
           `,
         }}
       />
+      )
     }
   </head>
 );
-
-Head.propTypes = {
-  title: PropTypes.string.isRequired,
-};
 
 export default Head;

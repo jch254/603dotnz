@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Box } from 'reflexbox';
 import moment from 'moment';
 import {
@@ -7,7 +7,7 @@ import {
   NavItem,
 } from 'rebass';
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <Box style={{ flex: 'none' }}>
     <Toolbar backgroundColor="white">
       <Space auto />

@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import {
   Banner,
   Heading,
 } from 'rebass';
 
-const Header = () => (
+const Header: React.FC = () => (
   <div className="color-change-4x">
     <Banner
       style={{ minHeight: '66vh', background: 'none' }}

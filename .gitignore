@@ -2,8 +2,10 @@ node_modules
 npm-debug.log
 .DS_Store
 index.html
-yarn-error.log
-.history/
+w.history/
 .terraform/
 *.tfstate*
 *.tfplan*
+.venv/
+dist-ts/
+.history/

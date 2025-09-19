@@ -1,8 +1,7 @@
 {
-  "presets": ["latest", "react"],
+  "presets": ["env", "react"],
   "plugins": [
     "transform-runtime",
-    "transform-inline-environment-variables",
     "transform-class-properties",
     "transform-object-rest-spread"
   ]
