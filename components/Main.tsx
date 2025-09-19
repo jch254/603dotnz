@@ -34,7 +34,6 @@ const Main: React.FC = () => (
       <Section pb={0}>
         <SectionHeader heading="About" />
         <Section pb={0}>
-          <SectionHeader heading="About" />
           <p style={{ fontSize: '20px' }}>
             Kia ora, I&#39;m Jordan — by trade a developer, but really a problem
             solver. I&#39;ve spent years building and breaking things across
