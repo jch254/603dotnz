@@ -14,8 +14,23 @@
         "cloudwatch:*",
         "cloudfront:*",
         "route53:*",
+        "route53domains:*",
         "iam:*",
         "ssm:DescribeParameters"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "route53:GetChange",
+        "route53:GetHostedZone",
+        "route53:ListHostedZones",
+        "route53:ListResourceRecordSets",
+        "route53:ChangeResourceRecordSets"
+      ],
+      "Resource": [
+        "arn:aws:route53:::hostedzone/*",
+        "arn:aws:route53:::change/*"
       ]
     },
     {
