@@ -32,7 +32,7 @@ const Main: React.FC = () => (
         </Media>
       </Block>
       <Section pb={0}>
-        <SectionHeader heading="About" />
+        <SectionHeader heading="About" mt={0} />
         <Section pb={0}>
           <p style={{ fontSize: '20px' }}>
             Kia ora, I&#39;m Jordan — by trade a developer, but really a problem
