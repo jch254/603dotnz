@@ -1,12 +1,17 @@
 terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 2.0"
+    }
+  }
   backend "s3" {
     encrypt = "true"
   }
 }
 
 provider "aws" {
-  region  = var.region
-  version = "~> 2.0"
+  region = var.region
 }
 
 resource "aws_iam_role" "codebuild_role" {
