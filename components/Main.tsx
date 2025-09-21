@@ -37,7 +37,7 @@ const Main: React.FC = () => (
           <p style={{ fontSize: '20px' }}>
             Kia ora, I&#39;m Jordan — by trade a developer, but really a problem
             solver. I&#39;ve spent years building and breaking things across
-            distributed systems, swwcalable APIs, micro(mini)services, cloud
+            distributed systems, scalable APIs, micro(mini)services, cloud
             infrastructure, and integrations. I even dip into UI now and then,
             just to keep things interesting.
             <br />
