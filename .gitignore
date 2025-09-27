@@ -9,3 +9,4 @@ w.history/
 .venv/
 dist-ts/
 .history/
+deploy-local.sh
