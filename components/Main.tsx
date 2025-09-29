@@ -149,7 +149,7 @@ const Main: React.FC = () => (
               <CardImage src="/img/SA.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://serverless-api.603.nz">
+              <HeadingLink href="#">
                 Serverless API
               </HeadingLink>
               <Space auto />
@@ -251,7 +251,7 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://scratchpad.zone">
+            <a href="https://scratchpad.603.nz">
               <CardImage src="/img/Scratchpad.png" />
             </a>
             <HeadingLink href="https://scratchpad.603.nz">Scratchpad</HeadingLink>
