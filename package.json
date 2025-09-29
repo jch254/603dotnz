@@ -9,8 +9,7 @@
     "docker:run": "docker run -p 8080:80 603nz",
     "docker:dev": "pnpm run build && pnpm run docker:build && pnpm run docker:run",
     "lint": "eslint components --ext .ts,.tsx || exit 0",
-    "lint:fix": "eslint --fix components --ext .ts,.tsx || exit 0",
-    "dev": "pnpm run build"
+    "lint:fix": "eslint --fix components --ext .ts,.tsx || exit 0"
   },
   "author": "Jordan Hornblow <jordan@jch254.com>",
   "license": "MIT",

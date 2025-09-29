@@ -66,10 +66,10 @@ Then open <http://localhost:8000>
 
 ```bash
 pnpm install
-pnpm run dev
+pnpm run build
 ```
 
-Note: the current `dev` script only builds once. Use `pnpm run serve` (above) or Docker (below) to preview changes.
+Use `pnpm run serve` (above) or Docker (below) to preview changes.
 
 ## Linting
 
