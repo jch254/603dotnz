@@ -224,7 +224,7 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              Scope is a Facebook Messenger bot that identifies songs from
+              Scope was a Facebook Messenger bot that identifies songs from
               lyrics/titles. Powered by AWS Lex and Lambda.
             </Text>
           </Card>
@@ -254,7 +254,7 @@ const Main: React.FC = () => (
             <a href="https://scratchpad.zone">
               <CardImage src="/img/Scratchpad.png" />
             </a>
-            <HeadingLink href="https://scratchpad.zone">Scratchpad</HeadingLink>
+            <HeadingLink href="https://scratchpad.603.nz">Scratchpad</HeadingLink>
             <Text small>
               Scratchpad is an organized repository for ideas, quotes,
               anecdotes, observations and information you come across during
