@@ -59,11 +59,3 @@ variable "acm_arn" {
   description = "ARN of ACM SSL certificate"
   default     = ""
 }
-
-variable "privacy_policy_subdomain" {
-  description = "Privacy polcy DNS Name (e.g. privacy.example.com)"
-}
-
-variable "privacy_policy_destination" {
-  description = "Where privacy policy is hosted"
-}
