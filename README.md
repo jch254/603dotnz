@@ -114,7 +114,6 @@ Caching highlights:
 
 - pnpm store and node_modules
 - TypeScript output `dist-ts/**/*` to speed up rebuilds
-- Terraform plugin/module caches under `infrastructure/.terraform`
 
 Output: `dist/` is what gets served (and is what the Docker image copies to nginx).
 
