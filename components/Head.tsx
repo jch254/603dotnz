@@ -11,7 +11,7 @@ const Head: React.FC<HeadProps> = ({ title }) => (
     <title>{title}</title>
     <link href="index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" />
     {
       process.env.GA_ID && (
       <script

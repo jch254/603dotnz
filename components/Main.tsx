@@ -19,7 +19,7 @@ const Main: React.FC = () => (
   <Container pb={3}>
     <Flex column>
       <Block pt={4} mt={3} mb={0}>
-        <Media m={0} align="center" img="/img/Goku.png">
+        <Media m={0} align="center" img="img/Goku.png">
           <Heading size={2} big>
             Kia ora,{' '}
             <a
@@ -67,7 +67,7 @@ const Main: React.FC = () => (
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://lushauraltreats.com">
-              <CardImage src="/img/LushAuralTreats.svg" />
+              <CardImage src="img/LushAuralTreats.svg" />
             </a>
             <HeadingLink href="https://lushauraltreats.com">
               Lush Aural Treats
@@ -83,7 +83,7 @@ const Main: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardImage src="/img/Wax.jpeg" />
+              <CardImage src="img/Wax.jpeg" />
             </a>
             <Heading>
               <a
@@ -101,7 +101,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://starter-pack-typescript.603.nz">
-              <CardImage src="/img/SP.png" />
+              <CardImage src="img/SP.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="https://starter-pack-typescript.603.nz">
@@ -124,7 +124,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://buildpipeline-prod.603.nz">
-              <CardImage src="/img/BuildPipeline.png" />
+              <CardImage src="img/BuildPipeline.png" />
             </a>
             <Flex align="center">
               <Heading>
@@ -146,7 +146,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://serverless-api.603.nz">
-              <CardImage src="/img/SA.png" />
+              <CardImage src="img/SA.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="#">
@@ -168,7 +168,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://audio-insights.603.nz">
-              <CardImage src="/img/AI.png" />
+              <CardImage src="img/AI.png" />
             </a>
             <Flex align="center">
               <HeadingLink href="https://audio-insights.603.nz">
@@ -194,7 +194,7 @@ const Main: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardImage src="/img/Scope.jpg" />
+              <CardImage src="img/Scope.jpg" />
             </a>
             <Flex align="center">
               <Heading>
@@ -234,7 +234,7 @@ const Main: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardImage src="/img/TF.png" />
+              <CardImage src="img/TF.png" />
             </a>
             <Heading>
               <a
@@ -252,7 +252,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a href="https://scratchpad.603.nz">
-              <CardImage src="/img/Scratchpad.png" />
+              <CardImage src="img/Scratchpad.png" />
             </a>
             <HeadingLink href="https://scratchpad.603.nz">Scratchpad</HeadingLink>
             <Text small>
@@ -262,7 +262,7 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="/img/Matrix.gif" />
+            <CardImage src="img/Matrix.gif" />
             <Flex align="center">
               <Heading>Under Development</Heading>
               <Space auto />
@@ -270,7 +270,7 @@ const Main: React.FC = () => (
             <Text small>Check back soon.</Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="/img/Matrix.gif" />
+            <CardImage src="img/Matrix.gif" />
             <Flex align="center">
               <Heading>Under Development</Heading>
               <Space auto />
@@ -278,7 +278,7 @@ const Main: React.FC = () => (
             <Text small>Check back soon.</Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="/img/Matrix.gif" />
+            <CardImage src="img/Matrix.gif" />
             <Flex align="center">
               <Heading>Under Development</Heading>
               <Space auto />
