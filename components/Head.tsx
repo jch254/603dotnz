@@ -6,6 +6,7 @@ interface HeadProps {
 
 const Head: React.FC<HeadProps> = ({ title }) => (
   <head>
+    <base href="/603dotnz/" />
     <meta charSet="utf-8" />
     <title>{title}</title>
     <link href="/index.css" rel="stylesheet" />
