@@ -66,15 +66,16 @@ const Main: React.FC = () => (
         <SectionHeader mt={0} heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://lushauraltreats.com">
-              <CardImage src="img/LushAuralTreats.svg" />
-            </a>
-            <HeadingLink href="https://lushauraltreats.com">
+            {/* <a href="https://lushauraltreats.com"> */}
+            <CardImage src="img/LushAuralTreats.svg" />
+            {/* </a> */}
+            <Heading>
               Lush Aural Treats
-            </HeadingLink>
+            </Heading>
             <Text small>
               Fire through a music link and it quietly shows up in a lean API +
               a featherweight web UI. Built with NestJS, DynamoDB, and vanilla TS.
+              Landing soon.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -100,21 +101,23 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://starter-pack-typescript.603.nz">
+            <a
+              href="https://github.com/jch254/starter-pack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CardImage src="img/SP.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://starter-pack-typescript.603.nz">
-                Starter Pack
-              </HeadingLink>
-              <Space auto />
-              <a
-                href="https://github.com/jch254/starter-pack"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              <Heading>
+                <a
+                  href="https://github.com/jch254/starter-pack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Starter Pack
+                </a>
+              </Heading>
             </Flex>
             <Text small>
               Combines React (ft. hooks), Redux, Redux-saga and TypeScript with
@@ -123,21 +126,23 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://buildpipeline-prod.603.nz">
+            <a
+              href="https://github.com/jch254/buildpipeline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CardImage src="img/BuildPipeline.png" />
             </a>
             <Flex align="center">
               <Heading>
-                <a href="https://buildpipeline-prod.603.nz">BuildPipeline</a>
+                <a
+                  href="https://github.com/jch254/buildpipeline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  BuildPipeline
+                </a>
               </Heading>
-              <Space auto />
-              <a
-                href="https://github.com/jch254/buildpipeline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
             </Flex>
             <Text small>
               BuildPipeline is an AWS-powered serverless build, test and deploy
@@ -145,21 +150,23 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://serverless-api.603.nz">
+            <a
+              href="https://github.com/jch254/serverless-node-dynamodb-api"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CardImage src="img/SA.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="#">
-                Serverless API
-              </HeadingLink>
-              <Space auto />
-              <a
-                href="https://github.com/jch254/serverless-node-dynamodb-api"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              <Heading>
+                <a
+                  href="https://github.com/jch254/serverless-node-dynamodb-api"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Serverless API
+                </a>
+              </Heading>
             </Flex>
             <Text small>
               API powered by Serverless, TypeScript, Webpack and DynamoDB,
@@ -167,21 +174,23 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://audio-insights.603.nz">
+            <a
+              href="https://github.com/jch254/audio-insights"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CardImage src="img/AI.png" />
             </a>
             <Flex align="center">
-              <HeadingLink href="https://audio-insights.603.nz">
-                Audio Insights
-              </HeadingLink>
-              <Space auto />
-              <a
-                href="https://github.com/jch254/audio-insights"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
+              <Heading>
+                <a
+                  href="https://github.com/jch254/audio-insights"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Audio Insights
+                </a>
+              </Heading>
             </Flex>
             <Text small>
               Insights, visualizations and recommendations derived from your
@@ -251,12 +260,10 @@ const Main: React.FC = () => (
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://scratchpad.603.nz">
-              <CardImage src="img/Scratchpad.png" />
-            </a>
+            <CardImage src="img/Scratchpad.png" />
             <HeadingLink href="https://scratchpad.603.nz">Scratchpad</HeadingLink>
             <Text small>
-              Scratchpad is an organized repository for ideas, quotes,
+              Scratchpad was an organized repository for ideas, quotes,
               anecdotes, observations and information you come across during
               your quest through life.
             </Text>
