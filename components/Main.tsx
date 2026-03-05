@@ -66,16 +66,15 @@ const Main: React.FC = () => (
         <SectionHeader mt={0} heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            {/* <a href="https://lushauraltreats.com"> */}
-            <CardImage src="img/LushAuralTreats.svg" />
-            {/* </a> */}
-            <Heading>
+            <a href="https://lat.nz">
+              <CardImage src="img/LushAuralTreats.svg" />
+            </a>
+            <HeadingLink href="https://lat.nz">
               Lush Aural Treats
-            </Heading>
+            </HeadingLink>
             <Text small>
               Fire through a music link and it quietly shows up in a lean API +
               a featherweight web UI. Built with NestJS, DynamoDB, and vanilla TS.
-              Landing soon.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -261,7 +260,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <CardImage src="img/Scratchpad.png" />
-            <HeadingLink href="https://scratchpad.603.nz">Scratchpad</HeadingLink>
+            <Heading>Scratchpad</Heading>
             <Text small>
               Scratchpad was an organized repository for ideas, quotes,
               anecdotes, observations and information you come across during
