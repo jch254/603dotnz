@@ -66,12 +66,22 @@ const Main: React.FC = () => (
         <SectionHeader mt={0} heading="Projects" />
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a href="https://lat.nz">
+            <a
+              href="https://lat.nz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <CardImage src="img/LushAuralTreats.svg" />
             </a>
-            <HeadingLink href="https://lat.nz">
-              Lush Aural Treats
-            </HeadingLink>
+            <Heading>
+              <a
+                href="https://lat.nz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Lush Aural Treats
+              </a>
+            </Heading>
             <Text small>
               Fire through a music link and it quietly shows up in a lean API +
               a featherweight web UI. Built with NestJS, DynamoDB, and vanilla TS.
