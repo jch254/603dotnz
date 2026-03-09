@@ -3,7 +3,6 @@ import { Flex } from 'reflexbox';
 import {
   Container,
   Heading,
-  Blockquote,
   Card,
   CardImage,
   Space,
@@ -362,14 +361,27 @@ const Main: React.FC = () => (
       </Section>
       <Section>
         <Block>
-          <Blockquote
-            href="https://www.youtube.com/watch?v=BtpHbpuZT-c"
-            source="Skepta"
+          <blockquote style={{
+            fontSize: '1.25rem', fontStyle: 'italic', margin: 0, marginBottom: '1rem',
+          }}
           >
-            &quot;Everyday, bro, we&#39;ve gotta stay battling, gotta stay
-            fighting, gotta stay striving, gotta stay dreaming, gotta stay
-            believing, gotta stay scheming...&quot;
-          </Blockquote>
+            <p style={{ margin: 0, marginBottom: '0.5rem' }}>
+              &quot;Everyday, bro, we&#39;ve gotta stay battling, gotta stay
+              fighting, gotta stay striving, gotta stay dreaming, gotta stay
+              believing, gotta stay scheming...&quot;
+            </p>
+            <cite style={{ fontSize: '0.875rem', fontStyle: 'normal' }}>
+              {'— '}
+              <a
+                href="https://www.youtube.com/watch?v=BtpHbpuZT-c"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'inherit' }}
+              >
+                Skepta
+              </a>
+            </cite>
+          </blockquote>
         </Block>
       </Section>
     </Flex>
