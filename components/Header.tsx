@@ -14,8 +14,11 @@ const Header: React.FC = () => (
         603.NZ
       </Heading>
       <Heading size={2}>
-        Internet Projects
+        Engineering Systems & Projects
       </Heading>
+      <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.75)', marginTop: '12px', fontWeight: 'normal' }}>
+        An engineering lab for systems, automation and infrastructure experiments.
+      </p>
     </Banner>
   </div>
 );

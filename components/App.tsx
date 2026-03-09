@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 const App: React.FC = () => (
   <html lang="en">
-    <Head title="603.nz | Internet Projects" />
+    <Head title="603.nz | Engineering Systems & Projects" />
     <body>
       <Header />
       <Main />

@@ -3,7 +3,6 @@ import { Flex } from 'reflexbox';
 import {
   Container,
   Heading,
-  HeadingLink,
   Blockquote,
   Card,
   CardImage,
@@ -24,6 +23,8 @@ const Main: React.FC = () => (
             Kia ora,{' '}
             <a
               href="https://jch254.com"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{ textDecoration: 'underline' }}
             >
               I&#39;m Jordan
@@ -37,7 +38,7 @@ const Main: React.FC = () => (
           <p style={{ fontSize: '20px' }}>
             Kia ora, I&#39;m Jordan — by trade a developer, but really a problem
             solver. I&#39;ve spent years building and breaking things across
-            distributed systems, scalable APIs, micro(mini)services, cloud
+            distributed systems, scalable APIs, microservices, cloud
             infrastructure, and integrations. I even dip into UI now and then,
             just to keep things interesting.
             <br />
@@ -45,8 +46,8 @@ const Main: React.FC = () => (
             I like to think of code the way I think of music: every layer
             matters, and when you understand how it all fits together, you can
             create something that works in harmony. That&#39;s why I believe in
-            knowing the full stack — it lets me architect stronger, more
-            resilient systems and debug issues without the guesswork.
+            understanding the full stack — it lets me architect stronger, more
+            resilient systems and debug issues without guesswork.
             <br />
             <br />
             I love the thrill of starting from scratch and spinning up new
@@ -56,15 +57,20 @@ const Main: React.FC = () => (
             <br />
             <br />
             <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-              This is my little corner of the Internet to share projects,
-              experiments, and whatever else I&#39;ve been hacking on.
+              This is my little engineering lab on the Internet — where I share
+              systems, experiments and projects I build.
             </span>
           </p>
         </Section>
       </Section>
-      <Section pb={0}>
-        <SectionHeader mt={0} heading="Projects" />
+      <Section pb={0} pt={3}>
+        <SectionHeader mt={0} heading="Engineering Systems & Projects" />
+        <p style={{ fontSize: '20px' }}>
+          A selection of systems and experiments exploring cloud architecture,
+          APIs, automation and data pipelines.
+        </p>
         <Flex align="center" justify="center" wrap gutter={2}>
+          {/* Row 1: Production product, automation system, engineering infrastructure */}
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://lat.nz"
@@ -83,8 +89,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Fire through a music link and it quietly shows up in a lean API +
-              a featherweight web UI. Built with NestJS, DynamoDB, and vanilla TS.
+              AI-assisted music discovery platform that ingests Spotify links
+              and generates album reviews automatically.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -105,33 +111,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Saves manually searching through your Discogs wantlist for local
-              listings
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/starter-pack"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/SP.png" />
-            </a>
-            <Flex align="center">
-              <Heading>
-                <a
-                  href="https://github.com/jch254/starter-pack"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Starter Pack
-                </a>
-              </Heading>
-            </Flex>
-            <Text small>
-              Combines React (ft. hooks), Redux, Redux-saga and TypeScript with
-              Auth0 as a starting point for modern web apps with solid
-              authentication.
+              Automated monitor that scans Discogs marketplace listings against
+              your wantlist and highlights local matches.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -154,10 +135,11 @@ const Main: React.FC = () => (
               </Heading>
             </Flex>
             <Text small>
-              BuildPipeline is an AWS-powered serverless build, test and deploy
-              pipeline ft. multiple environments (test and production).
+              AWS-powered CI/CD pipeline demonstrating automated build, test
+              and deployment across multiple environments.
             </Text>
           </Card>
+          {/* Row 2: API architecture, infrastructure as code, integrations */}
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://github.com/jch254/serverless-node-dynamodb-api"
@@ -178,8 +160,30 @@ const Main: React.FC = () => (
               </Heading>
             </Flex>
             <Text small>
-              API powered by Serverless, TypeScript, Webpack and DynamoDB,
-              intended as a starting point for Serverless APIs.
+              Example serverless API architecture built with AWS Lambda,
+              TypeScript and DynamoDB.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/TF.png" />
+            </a>
+            <Heading>
+              <a
+                href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terraform ECS Demo
+              </a>
+            </Heading>
+            <Text small>
+              Infrastructure-as-code demo provisioning an ECS cluster with
+              autoscaling services behind an Application Load Balancer.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -202,8 +206,33 @@ const Main: React.FC = () => (
               </Heading>
             </Flex>
             <Text small>
-              Insights, visualizations and recommendations derived from your
-              Spotify library. Powered by React, Redux and Redux-saga.
+              Spotify audio feature explorer and visualisation UI built with
+              React and the Spotify API.
+            </Text>
+          </Card>
+          {/* Row 3: Developer tooling */}
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://github.com/jch254/starter-pack"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/SP.png" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://github.com/jch254/starter-pack"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Starter Pack
+                </a>
+              </Heading>
+            </Flex>
+            <Text small>
+              React + Auth0 starter architecture combining Redux, Redux-Saga
+              and TypeScript.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -242,13 +271,52 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              Scope was a Facebook Messenger bot that identifies songs from
-              lyrics/titles. Powered by AWS Lex and Lambda.
+              Facebook Messenger bot that identifies songs from lyrics and
+              titles using AWS Lex and Lambda.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <CardImage src="img/Scratchpad.png" />
+            <Heading>Scratchpad</Heading>
+            <Text small>
+              Personal repository for ideas, notes and experiments collected
+              during projects.
+            </Text>
+          </Card>
+        </Flex>
+      </Section>
+      <Section pb={0} pt={3}>
+        <SectionHeader mt={0} heading="Engineering Infrastructure" />
+        <p style={{ fontSize: '20px' }}>
+          Container images and tooling used to build, test and deploy cloud
+          infrastructure and serverless applications.
+        </p>
+        <Flex align="center" justify="center" wrap gutter={2}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://github.com/jch254/docker-node-serverless"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/Serverless.png" />
+            </a>
+            <Heading>
+              <a
+                href="https://github.com/jch254/docker-node-serverless"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                docker-node-serverless
+              </a>
+            </Heading>
+            <Text small>
+              Docker build environment for Node.js serverless applications with
+              AWS and Terraform tooling.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+              href="https://github.com/jch254/docker-node-terraform-aws"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -256,50 +324,39 @@ const Main: React.FC = () => (
             </a>
             <Heading>
               <a
-                href="https://github.com/jch254/terraform-ecs-autoscale-alb"
+                href="https://github.com/jch254/docker-node-terraform-aws"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Terraform ECS Demo
+                docker-node-terraform
               </a>
             </Heading>
             <Text small>
-              AWS ECS cluster with instance and service autoscaling configured
-              and running behind an ALB with path based routing set up.
+              Node.js + Terraform container image for AWS infrastructure
+              provisioning and deployment automation.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="img/Scratchpad.png" />
-            <Heading>Scratchpad</Heading>
+            <a
+              href="https://github.com/jch254/dind-terraform-aws"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/Docker.png" />
+            </a>
+            <Heading>
+              <a
+                href="https://github.com/jch254/dind-terraform-aws"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                dind-terraform-aws
+              </a>
+            </Heading>
             <Text small>
-              Scratchpad was an organized repository for ideas, quotes,
-              anecdotes, observations and information you come across during
-              your quest through life.
+              Docker-in-Docker CI environment used to build containers and
+              deploy Terraform infrastructure.
             </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="img/Matrix.gif" />
-            <Flex align="center">
-              <Heading>Under Development</Heading>
-              <Space auto />
-            </Flex>
-            <Text small>Check back soon.</Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="img/Matrix.gif" />
-            <Flex align="center">
-              <Heading>Under Development</Heading>
-              <Space auto />
-            </Flex>
-            <Text small>Check back soon.</Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="img/Matrix.gif" />
-            <Flex align="center">
-              <Heading>Under Development</Heading>
-              <Space auto />
-            </Flex>
-            <Text small>Check back soon.</Text>
           </Card>
         </Flex>
       </Section>
