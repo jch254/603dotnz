@@ -22,6 +22,14 @@ button:focus {
   outline: none;
 }
 
+.Card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.Card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+  transform: translateY(-2px);
+}
+
 .color-change-4x {
 	-webkit-animation: color-change-4x 6s linear infinite alternate both;
 	        animation: color-change-4x 6s linear infinite alternate both;

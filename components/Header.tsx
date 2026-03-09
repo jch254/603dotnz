@@ -16,7 +16,7 @@ const Header: React.FC = () => (
       <Heading size={2}>
         Engineering Systems & Projects
       </Heading>
-      <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.75)', marginTop: '12px', fontWeight: 'normal' }}>
+      <p style={{ fontSize: '14px', color: 'rgba(255,255,255,0.75)', marginTop: '20px', fontWeight: 'normal' }}>
         An engineering lab for systems, automation and infrastructure experiments.
       </p>
     </Banner>
