@@ -35,28 +35,23 @@ const Main: React.FC = () => (
         <SectionHeader heading="About" mt={0} />
         <Section pb={0} pt={0}>
           <p style={{ fontSize: '20px' }}>
-            Kia ora, I&#39;m Jordan — by trade a developer, but really a problem
-            solver. I&#39;ve spent years building and breaking things across
-            distributed systems, scalable APIs, microservices, cloud
-            infrastructure, and integrations. I even dip into UI now and then,
-            just to keep things interesting.
+            Kia ora, I&#39;m Jordan. I build distributed systems, APIs,
+            and cloud infrastructure. I dip into UI when needed.
             <br />
             <br />
-            I like to think of code the way I think of music: every layer
-            matters, and when you understand how it all fits together, you can
-            create something that works in harmony. That&#39;s why I believe in
-            understanding the full stack — it lets me architect stronger, more
-            resilient systems and debug issues without guesswork.
+            I think about code the way I think about music: every layer
+            matters, and when you understand how it all fits together, you
+            can create something that really works. Understanding the full
+            stack means I can debug without guesswork.
             <br />
             <br />
-            I love the thrill of starting from scratch and spinning up new
-            applications, but I also respect the craft of maintaining and
-            evolving what&#39;s already there. Greenfield or legacy —
-            there&#39;s always a groove to find.
+            Starting from scratch is the fun part. But most real work is
+            keeping existing systems alive. Either way, there&#39;s a groove
+            to find.
             <br />
             <br />
             <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-              This is my little engineering lab on the Internet — where I share
+              This is my engineering lab on the Internet — where I share
               systems, experiments and projects I build.
             </span>
           </p>
@@ -65,8 +60,8 @@ const Main: React.FC = () => (
       <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Systems & Projects" />
         <p style={{ fontSize: '20px' }}>
-          A selection of systems and experiments exploring cloud architecture,
-          APIs, automation and data pipelines.
+          Systems and experiments in cloud architecture, APIs, automation
+          and data pipelines.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
           {/* Row 1: Production product, automation system, engineering infrastructure */}
@@ -134,8 +129,8 @@ const Main: React.FC = () => (
               </Heading>
             </Flex>
             <Text small>
-              AWS-powered CI/CD pipeline demonstrating automated build, test
-              and deployment across multiple environments.
+              CI/CD pipeline on AWS. Automated build, test and deployment
+              across multiple environments.
             </Text>
           </Card>
           {/* Row 2: API architecture, infrastructure as code, integrations */}
