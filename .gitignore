@@ -10,3 +10,4 @@ w.history/
 dist-ts/
 .history/
 .codereview
+.terraform*
