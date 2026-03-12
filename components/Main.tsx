@@ -83,8 +83,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              AI-assisted music discovery platform that ingests Spotify links
-              and generates album reviews automatically.
+              AI-assisted music discovery platform that ingests album links
+              and generates reviews automatically.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
