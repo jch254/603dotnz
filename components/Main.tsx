@@ -111,7 +111,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="https://github.com/jch254/buildpipeline"
+              href="https://buildpipeline--test.603.nz"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -120,13 +120,21 @@ const Main: React.FC = () => (
             <Flex align="center">
               <Heading>
                 <a
-                  href="https://github.com/jch254/buildpipeline"
+                  href="https://buildpipeline--test.603.nz"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   BuildPipeline
                 </a>
               </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/buildpipeline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
             </Flex>
             <Text small>
               CI/CD pipeline on AWS. Automated build, test and deployment
