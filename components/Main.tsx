@@ -83,7 +83,7 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              AI-assisted music discovery platform that ingests album links
+              AI-assisted music discovery platform that ingests album links via email
               and generates reviews automatically.
             </Text>
           </Card>
