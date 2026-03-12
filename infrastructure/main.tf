@@ -91,6 +91,15 @@ resource "cloudflare_dns_record" "apple_verification" {
   zone_id = data.cloudflare_zone.zone.id
 }
 
+resource "cloudflare_dns_record" "acm_validation_wildcard" {
+  content = "_eaf27cc849d352c70825788e0231165f.jkddzztszm.acm-validations.aws"
+  name    = "_7dba64060c909694be0fd5e895a34b2b"
+  proxied = false
+  ttl     = 1
+  type    = "CNAME"
+  zone_id = data.cloudflare_zone.zone.id
+}
+
 resource "cloudflare_ruleset" "response_headers" {
   zone_id = data.cloudflare_zone.zone.id
   name    = "default"
