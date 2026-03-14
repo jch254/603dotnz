@@ -67,7 +67,7 @@ const Main: React.FC = () => (
           {/* Row 1: Production product, automation system, engineering infrastructure */}
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="https://lat.nz"
+              href="https://lushauraltreats.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -75,7 +75,7 @@ const Main: React.FC = () => (
             </a>
             <Heading>
               <a
-                href="https://lat.nz"
+                href="https://lushauraltreats.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
