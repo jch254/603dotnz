@@ -58,6 +58,50 @@ const Main: React.FC = () => (
         </Section>
       </Section>
       <Section pb={0} pt={3}>
+        <SectionHeader mt={0} heading="Latest writing" />
+        <div style={{ fontSize: '20px' }}>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
+              href="https://jch254.com/blog/beyond-vibe-coding"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Beyond Vibe Coding: Using AI as an Engineering Collaborator
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
+              href="https://jch254.com/blog/prompt-engineering-ai-music-suno"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prompt Engineering for AI Music: What Actually Works with Suno
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
+              href="https://jch254.com/blog/automate-aws-credits-terraform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Automating the $100 of AWS Credits Available to New Accounts
+            </a>
+          </p>
+          <p style={{ margin: '1.25rem 0 0' }}>
+            <a
+              href="https://jch254.com/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View all posts →
+            </a>
+          </p>
+        </div>
+      </Section>
+      <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Systems & Projects" />
         <p style={{ fontSize: '20px' }}>
           Systems and experiments in cloud architecture, APIs, automation
