@@ -63,6 +63,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/lush-aural-treats-aws-cost-redesign"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              How a $1,000 AWS Bill Made Me Redesign My ECS Architecture
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/beyond-vibe-coding"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,16 +88,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               Prompt Engineering for AI Music: What Actually Works with Suno
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/automate-aws-credits-terraform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Automating the $100 of AWS Credits Available to New Accounts
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
