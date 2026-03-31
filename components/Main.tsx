@@ -63,6 +63,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/email-driven-multi-tenant-ingestion-pipeline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Building an Email-Driven Multi-Tenant Ingestion Pipeline
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/lush-aural-treats-aws-cost-redesign"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,16 +88,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               Beyond Vibe Coding: Using AI as an Engineering Collaborator
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/prompt-engineering-ai-music-suno"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Prompt Engineering for AI Music: What Actually Works with Suno
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
