@@ -63,6 +63,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/killing-google-analytics-internal-event-tracking"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Analytics Was Measuring the Wrong Thing
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/email-driven-multi-tenant-ingestion-pipeline"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,16 +88,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               How a $1,000 AWS Bill Made Me Redesign My ECS Architecture
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/beyond-vibe-coding"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Beyond Vibe Coding: Using AI as an Engineering Collaborator
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
