@@ -108,7 +108,40 @@ const Main: React.FC = () => (
           and data pipelines.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
-          {/* Row 1: Production product, automation system, engineering infrastructure */}
+          {/* Row 1: Reference architecture, production product, automation system */}
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://reference-architecture.603.nz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/RA.png" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://reference-architecture.603.nz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Reference Arch
+                </a>
+              </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/reference-architecture"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              Minimal, production-ready architecture for scaffolding new
+              projects via LLM/AI tools. Terraform + AWS + Docker +
+              NestJS + React.
+            </Text>
+          </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://lushauraltreats.com"
@@ -319,14 +352,6 @@ const Main: React.FC = () => (
             <Text small>
               Facebook Messenger bot that identifies songs from lyrics and
               titles using AWS Lex and Lambda.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <CardImage src="img/Scratchpad.png" />
-            <Heading>Scratchpad</Heading>
-            <Text small>
-              Personal repository for ideas, notes and experiments collected
-              during projects.
             </Text>
           </Card>
         </Flex>
