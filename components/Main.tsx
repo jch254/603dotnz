@@ -63,6 +63,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/renaming-github-repo-breaks-codebuild"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Renaming a GitHub Repo Silently Breaks AWS CodeBuild
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/killing-google-analytics-internal-event-tracking"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,16 +88,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               Building an Email-Driven Multi-Tenant Ingestion Pipeline
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/lush-aural-treats-aws-cost-redesign"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              How a $1,000 AWS Bill Made Me Redesign My ECS Architecture
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
