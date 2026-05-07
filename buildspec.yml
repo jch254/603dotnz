@@ -1,0 +1,82 @@
+version: 0.2
+
+env:
+  variables:
+    AWS_DEFAULT_REGION: "ap-southeast-4"
+    REMOTE_STATE_BUCKET: "jch254-terraform-remote-state"
+    TF_STATE_KEY: "603-prod-infrastructure"
+    GITHUB_REPOSITORY: "jch254/603dotnz"
+    PAGES_BRANCH: "gh-pages"
+    BUILD_OUTPUT_DIR: "dist"
+  parameter-store:
+    GITHUB_TOKEN: "/603dotnz/github-token"
+    CLOUDFLARE_API_TOKEN: "/603dotnz/cloudflare-api-token"
+  exported-variables:
+    - COMMIT_MESSAGE
+    - COMMIT_SHA
+    - PAGES_BRANCH
+
+phases:
+  install:
+    commands:
+      - echo Setting up Terraform plugin cache...
+      - export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+      - mkdir -p "$TF_PLUGIN_CACHE_DIR"
+      - echo Installing Node dependencies...
+      - corepack enable
+      - corepack prepare pnpm@9.15.9 --activate
+      - pnpm config set store-dir /root/.pnpm-store
+      - pnpm install --frozen-lockfile
+
+  pre_build:
+    commands:
+      - echo Preparing deployment...
+      - 'test -n "$GITHUB_TOKEN" || { echo "GITHUB_TOKEN is required"; exit 1; }'
+      - 'test -n "$CLOUDFLARE_API_TOKEN" || { echo "CLOUDFLARE_API_TOKEN is required"; exit 1; }'
+      - export COMMIT_MESSAGE="$(git log -1 --pretty=%s 2>/dev/null || echo '')"
+      - export COMMIT_SHA="${CODEBUILD_RESOLVED_SOURCE_VERSION:-$(git rev-parse HEAD)}"
+      - git config --global user.name "${GIT_COMMITTER_NAME:-603.nz CodeBuild}"
+      - git config --global user.email "${GIT_COMMITTER_EMAIL:-deploy@603.nz}"
+      - git config --global credential.helper '!f() { echo username=x-access-token; echo password="$GITHUB_TOKEN"; }; f'
+
+  build:
+    commands:
+      - echo Deploying infrastructure...
+      - bash ./infrastructure/deploy-infrastructure.bash
+      - echo Building static site...
+      - pnpm run build
+
+  post_build:
+    commands:
+      - echo Publishing static output to GitHub Pages branch...
+      - |
+        set -euo pipefail
+
+        REPO_URL="https://github.com/${GITHUB_REPOSITORY}.git"
+        DEPLOY_DIR="$(mktemp -d)"
+
+        if git ls-remote --exit-code --heads "$REPO_URL" "$PAGES_BRANCH" >/dev/null 2>&1; then
+          git clone --depth 1 --branch "$PAGES_BRANCH" "$REPO_URL" "$DEPLOY_DIR"
+        else
+          git clone --depth 1 "$REPO_URL" "$DEPLOY_DIR"
+          cd "$DEPLOY_DIR"
+          git switch --orphan "$PAGES_BRANCH"
+        fi
+
+        cd "$DEPLOY_DIR"
+        find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+        cp -R "$CODEBUILD_SRC_DIR/$BUILD_OUTPUT_DIR/." .
+        touch .nojekyll
+
+        git add -A
+        if git diff --cached --quiet; then
+          echo "No site changes to deploy."
+        else
+          git commit -m "Deploy 603.nz ${COMMIT_SHA}"
+          git push origin "$PAGES_BRANCH"
+        fi
+
+cache:
+  paths:
+    - "/root/.terraform.d/plugin-cache/**/*"
+    - "/root/.pnpm-store/**/*"
