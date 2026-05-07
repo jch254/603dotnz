@@ -147,7 +147,7 @@ const Main: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardImage src="img/NAs.png" />
+              <CardImage src="img/NA.png" />
             </a>
             <Heading>
               <a
