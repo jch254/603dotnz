@@ -236,7 +236,7 @@ const Main: React.FC = () => (
               </Heading>
               <Space auto />
               <a
-                href="https://github.com/jch254/serverless-node-dynamodb-api"
+                href="https://github.com/jch254/starter-pack"
                 target="_blank"
                 rel="noopener noreferrer"
               >
