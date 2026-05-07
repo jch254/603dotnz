@@ -108,7 +108,6 @@ const Main: React.FC = () => (
           and data pipelines.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
-          {/* Row 1: Reference architecture, production product, automation system */}
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://reference-architecture.603.nz/"
@@ -144,6 +143,27 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
+              href="https://namasteapp.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/LushAuralTreats.svg" />
+            </a>
+            <Heading>
+              <a
+                href="https://namasteapp.tech"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Namaste
+              </a>
+            </Heading>
+            <Text small>
+              Calm GTD task manager with workspaces, magic-link auth, projects, contexts, scheduling, repeats and bulk capture.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
               href="https://lushauraltreats.com"
               target="_blank"
               rel="noopener noreferrer"
@@ -162,28 +182,6 @@ const Main: React.FC = () => (
             <Text small>
               AI-assisted music discovery platform that ingests album links via email
               and generates reviews automatically.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/discogs-market-monitor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/Wax.jpeg" />
-            </a>
-            <Heading>
-              <a
-                href="https://github.com/jch254/discogs-market-monitor"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Discogs Wantlist Monitor
-              </a>
-            </Heading>
-            <Text small>
-              Automated monitor that scans Discogs marketplace listings against
-              your wantlist and highlights local matches.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -218,7 +216,70 @@ const Main: React.FC = () => (
               across multiple environments.
             </Text>
           </Card>
-          {/* Row 2: API architecture, infrastructure as code, integrations */}
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://starter-pack.603.nz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/SP.png" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://starter-pack.603.nz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Starter Pack
+                </a>
+              </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/serverless-node-dynamodb-api"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              React + Auth0 starter architecture combining Redux, Redux-Saga
+              and TypeScript.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://audio-insights.603.nz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/AI.png" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://audio-insights.603.nz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Audio Insights
+                </a>
+              </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/audio-insights"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              Spotify audio feature explorer and visualisation UI built with
+              React and the Spotify API.
+            </Text>
+          </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://github.com/jch254/serverless-node-dynamodb-api"
@@ -245,6 +306,28 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
+              href="https://github.com/jch254/discogs-market-monitor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/Wax.jpeg" />
+            </a>
+            <Heading>
+              <a
+                href="https://github.com/jch254/discogs-market-monitor"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Discogs Wantlist Monitor
+              </a>
+            </Heading>
+            <Text small>
+              Automated monitor that scans Discogs marketplace listings against
+              your wantlist and highlights local matches.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
               href="https://github.com/jch254/terraform-ecs-autoscale-alb"
               target="_blank"
               rel="noopener noreferrer"
@@ -263,95 +346,6 @@ const Main: React.FC = () => (
             <Text small>
               Infrastructure-as-code demo provisioning an ECS cluster with
               autoscaling services behind an Application Load Balancer.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/audio-insights"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/AI.png" />
-            </a>
-            <Flex align="center">
-              <Heading>
-                <a
-                  href="https://github.com/jch254/audio-insights"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Audio Insights
-                </a>
-              </Heading>
-            </Flex>
-            <Text small>
-              Spotify audio feature explorer and visualisation UI built with
-              React and the Spotify API.
-            </Text>
-          </Card>
-          {/* Row 3: Developer tooling */}
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/starter-pack"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/SP.png" />
-            </a>
-            <Flex align="center">
-              <Heading>
-                <a
-                  href="https://github.com/jch254/starter-pack"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Starter Pack
-                </a>
-              </Heading>
-            </Flex>
-            <Text small>
-              React + Auth0 starter architecture combining Redux, Redux-Saga
-              and TypeScript.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://m.me/scopebot"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/Scope.jpg" />
-            </a>
-            <Flex align="center">
-              <Heading>
-                <a
-                  href="https://m.me/scopebot"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Scope
-                </a>
-              </Heading>
-              <Space auto />
-              <a
-                href="https://www.producthunt.com/posts/scope-5"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Product Hunt
-              </a>
-              &nbsp;|&nbsp;
-              <a
-                href="https://github.com/jch254/scope-lex-handler"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </Flex>
-            <Text small>
-              Facebook Messenger bot that identifies songs from lyrics and
-              titles using AWS Lex and Lambda.
             </Text>
           </Card>
         </Flex>
