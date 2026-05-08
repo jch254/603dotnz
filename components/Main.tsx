@@ -250,6 +250,38 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
+              href="https://serverless-api.603.nz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/SA.png" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://serverless-api.603.nz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Serverless API
+                </a>
+              </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/serverless-node-dynamodb-api"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              Example serverless API architecture built with AWS Lambda,
+              TypeScript and DynamoDB.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
               href="https://audio-insights.603.nz"
               target="_blank"
               rel="noopener noreferrer"
@@ -278,30 +310,6 @@ const Main: React.FC = () => (
             <Text small>
               Spotify audio feature explorer and visualisation UI built with
               React and the Spotify API.
-            </Text>
-          </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/serverless-node-dynamodb-api"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/SA.png" />
-            </a>
-            <Flex align="center">
-              <Heading>
-                <a
-                  href="https://github.com/jch254/serverless-node-dynamodb-api"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Serverless API
-                </a>
-              </Heading>
-            </Flex>
-            <Text small>
-              Example serverless API architecture built with AWS Lambda,
-              TypeScript and DynamoDB.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
