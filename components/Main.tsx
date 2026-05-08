@@ -186,7 +186,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="https://buildpipeline--test.603.nz"
+              href="https://buildpipeline--prod.603.nz"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -195,7 +195,7 @@ const Main: React.FC = () => (
             <Flex align="center">
               <Heading>
                 <a
-                  href="https://buildpipeline--test.603.nz"
+                  href="https://buildpipeline--prod.603.nz"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
