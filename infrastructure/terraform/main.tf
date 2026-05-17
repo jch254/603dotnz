@@ -110,6 +110,40 @@ locals {
       Resource = local.codebuild_cache_object_arn
     },
   ]
+
+  global_response_headers = {
+    "Permissions-Policy" = {
+      operation = "set"
+      value     = "camera=(), microphone=(), geolocation=(), payment=()"
+    }
+    "Referrer-Policy" = {
+      operation = "set"
+      value     = "strict-origin-when-cross-origin"
+    }
+    "Strict-Transport-Security" = {
+      operation = "set"
+      value     = "max-age=31536000; includeSubDomains; preload"
+    }
+    "X-Content-Type-Options" = {
+      operation = "set"
+      value     = "nosniff"
+    }
+    "X-Frame-Options" = {
+      operation = "set"
+      value     = "DENY"
+    }
+  }
+
+  # CSP is app-specific: apex/www use this static edge policy, while subdomain
+  # apps own CSP at their origin so Cloudflare does not override them zone-wide.
+  apex_content_security_policy = "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://w.soundcloud.com https://open.spotify.com https://www.instagram.com https://embed.podcasts.apple.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://cloudflareinsights.com; upgrade-insecure-requests"
+
+  apex_response_headers = {
+    "Content-Security-Policy" = {
+      operation = "set"
+      value     = local.apex_content_security_policy
+    }
+  }
 }
 
 module "cloudflare_api_token_parameter" {
@@ -338,8 +372,30 @@ module "dns_records" {
   records = local.cloudflare_dns_records
 }
 
-module "response_headers" {
-  source = "github.com/jch254/terraform-modules//cloudflare-response-headers?ref=1.16.0"
-
+resource "cloudflare_ruleset" "response_headers" {
   zone_id = data.cloudflare_zone.zone.id
+  name    = "default"
+  kind    = "zone"
+  phase   = "http_response_headers_transform"
+
+  rules = [
+    {
+      description = "Security Headers - Global"
+      expression  = "true"
+      action      = "rewrite"
+
+      action_parameters = {
+        headers = local.global_response_headers
+      }
+    },
+    {
+      description = "CSP - Apex Webapp"
+      expression  = "(http.host in {\"603.nz\" \"www.603.nz\"})"
+      action      = "rewrite"
+
+      action_parameters = {
+        headers = local.apex_response_headers
+      }
+    },
+  ]
 }

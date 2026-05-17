@@ -29,6 +29,6 @@ moved {
 }
 
 moved {
-  from = cloudflare_ruleset.response_headers
-  to   = module.response_headers.cloudflare_ruleset.this
+  from = module.response_headers.cloudflare_ruleset.this
+  to   = cloudflare_ruleset.response_headers
 }

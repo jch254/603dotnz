@@ -7,6 +7,7 @@ is the primary deployment runner for the static site.
 ## What is managed
 
 **DNS records** (`cloudflare_dns_record`)
+
 - `603.nz` CNAME → `jch254.github.io` (proxied)
 - `www` CNAME → `jch254.github.io` (proxied)
 - `603.nz` MX records → iCloud Mail (mx01/mx02.mail.icloud.com)
@@ -17,27 +18,38 @@ DNS records are managed through the shared `cloudflare-dns-records` module in
 `terraform-modules`.
 
 **Transform Rules** (`cloudflare_ruleset`)
-- HTTP response header rewrite rule applying security headers on all requests:
-  - `Content-Security-Policy`
+
+- HTTP response header rewrite rule `Security Headers - Global` applies generic
+  security headers on all requests:
+
   - `Permissions-Policy`
   - `Referrer-Policy`
   - `Strict-Transport-Security`
   - `X-Content-Type-Options`
   - `X-Frame-Options`
 
-Response headers are managed through the shared `cloudflare-response-headers`
-module in `terraform-modules`.
+- HTTP response header rewrite rule `CSP - Apex Webapp` applies
+  `Content-Security-Policy` only to `603.nz` and `www.603.nz`.
 
-This repo expects `terraform-modules` tag `1.16.0` or newer for the shared
-response-header module.
+CSP is app-specific and is not applied zone-wide. The apex/www static webapp has
+an edge CSP that preserves the existing font, image, embed, and style allowances
+and allows Cloudflare Web Analytics (`static.cloudflareinsights.com` script load
+and `cloudflareinsights.com` beacon connections). Subdomain apps own CSP at
+their origin/backend, so Cloudflare does not override app-generated policies such
+as Auth0 allowances.
+
+Response headers are managed directly in `terraform/main.tf` so the generic
+security headers and apex-only CSP can live in one Cloudflare ruleset.
 
 **CodeBuild deployment** (`aws_codebuild_project`)
+
 - `603dotnz` applies Terraform, then builds the static site from GitHub
 - deploy output is pushed to the `gh-pages` branch
 - `GITHUB_TOKEN` is read from SSM Parameter Store by `buildspec.yml`
 - `CLOUDFLARE_API_TOKEN` is read from SSM Parameter Store by `buildspec.yml`
 
 **SSM token placeholders** (`ssm-parameter-placeholder`)
+
 - `/603dotnz/github-token`
 - `/603dotnz/cloudflare-api-token`
 
@@ -66,7 +78,7 @@ repository webhook.
 Default SSM token placeholders:
 
 | Parameter | Description |
-|---|---|
+| --- | --- |
 | `/603dotnz/github-token` | GitHub token used by CodeBuild to push `gh-pages` |
 | `/603dotnz/cloudflare-api-token` | Cloudflare token used by Terraform |
 
@@ -122,7 +134,7 @@ root `buildspec.yml`.
 
 ## Migrating existing state
 
-The previous root-level resources are mapped into the shared modules by
+The previous resources are mapped into their current Terraform addresses by
 `terraform/moved.tf`:
 
 - `cloudflare_dns_record.www` → `module.dns_records.cloudflare_dns_record.this["www"]`
@@ -130,7 +142,7 @@ The previous root-level resources are mapped into the shared modules by
 - `cloudflare_dns_record.spf` → `module.dns_records.cloudflare_dns_record.this["spf"]`
 - `cloudflare_dns_record.apple_verification` → `module.dns_records.cloudflare_dns_record.this["apple_verification"]`
 - `cloudflare_dns_record.acm_validation_wildcard` → `module.dns_records.cloudflare_dns_record.this["acm_validation_wildcard"]`
-- `cloudflare_ruleset.response_headers` → `module.response_headers.cloudflare_ruleset.this`
+- `module.response_headers.cloudflare_ruleset.this` → `cloudflare_ruleset.response_headers`
 
 The four pre-existing apex `A` records (`apex_github_1`–`apex_github_4`
 pointing at GitHub Pages IPs `185.199.108-111.153`) are no longer managed and
@@ -149,5 +161,5 @@ If resources already exist in Cloudflare and need to be brought under Terraform 
 terraform import 'module.dns_records.cloudflare_dns_record.this["apex_github"]' <zone_id>/<record_id>
 
 # Ruleset - get ruleset ID from Cloudflare dashboard or API
-terraform import module.response_headers.cloudflare_ruleset.this <zone_id>/<ruleset_id>
+terraform import cloudflare_ruleset.response_headers <zone_id>/<ruleset_id>
 ```

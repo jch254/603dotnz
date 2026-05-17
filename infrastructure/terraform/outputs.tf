@@ -9,7 +9,7 @@ output "dns_record_ids" {
 
 output "response_headers_ruleset_id" {
   description = "Cloudflare response-header ruleset ID."
-  value       = module.response_headers.id
+  value       = cloudflare_ruleset.response_headers.id
 }
 
 output "cloudflare_api_token_parameter_name" {
