@@ -36,23 +36,23 @@ const Main: React.FC = () => (
         <Section pb={0} pt={0}>
           <p style={{ fontSize: '20px' }}>
             Kia ora, I&#39;m Jordan. I build distributed systems, APIs,
-            and cloud infrastructure. I dip into UI when needed.
+            and cloud infrastructure, and I occasionally work on UI when
+            needed.
             <br />
             <br />
-            I think about code the way I think about music: every layer
-            matters, and when you understand how it all fits together, you
-            can create something that really works. Understanding the full
-            stack means I can debug without guesswork.
+            I think about software the way I think about systems: every
+            layer matters, and understanding how they fit together is what
+            makes complex behaviour debuggable and predictable.
             <br />
             <br />
-            Starting from scratch is the fun part. But most real work is
-            keeping existing systems alive. Either way, there&#39;s a groove
-            to find.
+            Starting from scratch is the fun part. Most of the work is
+            keeping systems reliable, evolving them carefully, and making
+            decisions that hold up over time.
             <br />
             <br />
             <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-              This is my engineering lab on the Internet — where I share
-              systems, experiments and projects I build.
+              This is my engineering lab on the internet, where I share
+              systems, experiments, and open-source projects.
             </span>
           </p>
         </Section>
@@ -104,7 +104,7 @@ const Main: React.FC = () => (
       <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Systems & Projects" />
         <p style={{ fontSize: '20px' }}>
-          Systems and experiments in cloud architecture, APIs, automation
+          Systems and experiments in cloud architecture, APIs, automation,
           and data pipelines.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
@@ -137,8 +137,7 @@ const Main: React.FC = () => (
             </Flex>
             <Text small>
               Minimal, production-ready architecture for scaffolding new
-              projects via LLM/AI tools. Terraform + AWS + Docker +
-              NestJS + React.
+              applications using LLM-assisted workflows.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -159,7 +158,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Calm GTD task manager with workspaces, magic-link auth, projects, contexts, scheduling, repeats and bulk capture.
+              GTD task management system with workspaces, scheduling, repeats,
+              bulk capture, and an MCP server for AI agent integration.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -181,7 +181,7 @@ const Main: React.FC = () => (
             </Heading>
             <Text small>
               AI-assisted music discovery platform that ingests album links via email
-              and generates reviews automatically.
+              and generates structured reviews automatically.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -212,7 +212,7 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              CI/CD pipeline on AWS. Automated build, test and deployment
+              CI/CD system on AWS for automated build, test, and deployment
               across multiple environments.
             </Text>
           </Card>
@@ -244,7 +244,7 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              React + Auth0 starter architecture combining Redux, Redux-Saga
+              React + Auth0 application scaffold using Redux, Redux-Saga,
               and TypeScript.
             </Text>
           </Card>
@@ -276,8 +276,8 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              Example serverless API architecture built with AWS Lambda,
-              TypeScript and DynamoDB.
+              Reference serverless architecture using AWS Lambda,
+              TypeScript, and DynamoDB.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -308,7 +308,7 @@ const Main: React.FC = () => (
               </a>
             </Flex>
             <Text small>
-              Spotify audio feature explorer and visualisation UI built with
+              Spotify data exploration and visualisation tool built with
               React and the Spotify API.
             </Text>
           </Card>
@@ -330,8 +330,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Automated monitor that scans Discogs marketplace listings against
-              your wantlist and highlights local matches.
+              Automated system that monitors Discogs marketplace listings against
+              a user&#39;s wantlist and surfaces local matches.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -352,8 +352,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Infrastructure-as-code demo provisioning an ECS cluster with
-              autoscaling services behind an Application Load Balancer.
+              Infrastructure-as-code example provisioning an ECS cluster with
+              autoscaling behind an Application Load Balancer.
             </Text>
           </Card>
         </Flex>
@@ -361,8 +361,8 @@ const Main: React.FC = () => (
       <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Infrastructure" />
         <p style={{ fontSize: '20px' }}>
-          Container images and tooling used to build, test and deploy cloud
-          infrastructure and serverless applications.
+          Container images and tooling for building, testing, and deploying
+          cloud infrastructure and serverless applications.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -383,8 +383,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Docker build environment for Node.js serverless applications with
-              AWS and Terraform tooling.
+              Docker-based build environment for Node.js serverless applications
+              with AWS and Terraform tooling.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -406,7 +406,7 @@ const Main: React.FC = () => (
             </Heading>
             <Text small>
               Node.js + Terraform container image for AWS infrastructure
-              provisioning and deployment automation.
+              provisioning and deployment.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -427,8 +427,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              Docker-in-Docker CI environment used to build containers and
-              deploy Terraform infrastructure.
+              Docker-in-Docker CI environment for building containers and
+              deploying Terraform-based infrastructure.
             </Text>
           </Card>
         </Flex>
