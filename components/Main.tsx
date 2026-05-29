@@ -63,6 +63,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/google-nzpost-and-internet-archaeology/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google, NZ Post and the Ghosts in Legacy Infrastructure
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/reality-is-still-contested/"
               target="_blank"
               rel="noopener noreferrer"
@@ -78,16 +88,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               Renaming a GitHub Repo Silently Breaks AWS CodeBuild
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/killing-google-analytics-internal-event-tracking"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google Analytics Was Measuring the Wrong Thing
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
