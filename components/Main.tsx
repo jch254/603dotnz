@@ -142,6 +142,28 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
+              href="https://handscape.health"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/HS.png" />
+            </a>
+            <Heading>
+              <a
+                href="https://handscape.health"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Handscape
+              </a>
+            </Heading>
+            <Text small>
+              AR-assisted Korean Hand Therapy app with reference-backed sessions, body-mapping education, and practicals
+              hand-care routines.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
               href="https://namasteapp.tech"
               target="_blank"
               rel="noopener noreferrer"
@@ -334,28 +356,7 @@ const Main: React.FC = () => (
               a user&#39;s wantlist and surfaces local matches.
             </Text>
           </Card>
-          <Card m={2} style={{ width: '309px', height: '333px' }}>
-            <a
-              href="https://github.com/jch254/terraform-ecs-autoscale-alb"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <CardImage src="img/TF.png" />
-            </a>
-            <Heading>
-              <a
-                href="https://github.com/jch254/terraform-ecs-autoscale-alb"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Terraform ECS Demo
-              </a>
-            </Heading>
-            <Text small>
-              Infrastructure-as-code example provisioning an ECS cluster with
-              autoscaling behind an Application Load Balancer.
-            </Text>
-          </Card>
+
         </Flex>
       </Section>
       <Section pb={0} pt={3}>
