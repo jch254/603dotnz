@@ -104,8 +104,13 @@ const Main: React.FC = () => (
       <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Systems & Projects" />
         <p style={{ fontSize: '20px' }}>
-          Systems and experiments in cloud architecture, APIs, automation,
-          and data pipelines.
+          Live products, demos, and production-minded engineering systems
+          spanning cloud architecture, APIs, automation, AI workflows, and
+          data pipelines.
+        </p>
+        <p style={{ fontSize: '20px' }}>
+          All projects shown here are live, deployed, and usable. Source code is
+          available via GitHub for open-source projects.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
@@ -158,8 +163,8 @@ const Main: React.FC = () => (
               </a>
             </Heading>
             <Text small>
-              AR-assisted Korean Hand Therapy app with reference-backed sessions, body-mapping education, and practicals
-              hand-care routines.
+              AR-assisted Korean Hand Acupressure app with reference-backed sessions, body-mapping education, and
+              practicals hand-care routines.
             </Text>
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
