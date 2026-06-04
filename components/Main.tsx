@@ -35,25 +35,17 @@ const Main: React.FC = () => (
         <SectionHeader heading="About" mt={0} />
         <Section pb={0} pt={0}>
           <p style={{ fontSize: '20px' }}>
-            Kia ora, I&#39;m Jordan. I build distributed systems, APIs,
-            and cloud infrastructure, and I occasionally work on UI when
-            needed.
+            Kia ora, I&#39;m Jordan. I design and build software systems that move from idea to working product:
+            backend services, APIs, infrastructure, automation, data pipelines, and the occasional UI.
             <br />
             <br />
-            I think about software the way I think about systems: every
-            layer matters, and understanding how they fit together is what
-            makes complex behaviour debuggable and predictable.
+            My bias is toward systems that are small enough to understand and solid enough to run.
+            I like explicit architecture, boring infrastructure, clear operational behaviour,
+            and software that can evolve without becoming mysterious.
             <br />
             <br />
-            Starting from scratch is the fun part. Most of the work is
-            keeping systems reliable, evolving them carefully, and making
-            decisions that hold up over time.
-            <br />
-            <br />
-            <span style={{ fontSize: '20px', fontWeight: 'bold' }}>
-              This is my engineering lab on the internet, where I share
-              systems, experiments, and open-source projects.
-            </span>
+            603.nz is my engineering lab on the internet. It is where I publish live products,
+            reference architectures, experiments, and notes from building things properly.
           </p>
         </Section>
       </Section>
@@ -104,13 +96,15 @@ const Main: React.FC = () => (
       <Section pb={0} pt={3}>
         <SectionHeader mt={0} heading="Engineering Systems & Projects" />
         <p style={{ fontSize: '20px' }}>
-          Live products, demos, and production-minded engineering systems
-          spanning cloud architecture, APIs, automation, AI workflows, and
-          data pipelines.
+          A collection of live products, deployable demos, and open-source engineering systems.
         </p>
         <p style={{ fontSize: '20px' }}>
-          All projects shown here are live, deployed, and usable. Source code is
-          available via GitHub for open-source projects.
+          Some projects are full products. Some are scaffolds for future products.
+          Some are focused experiments around infrastructure, AI workflows, automation, or data movement.
+        </p>
+        <p style={{ fontSize: '20px' }}>
+          The shared goal is practical engineering:
+          build the thing, deploy it, understand the trade-offs, and leave a clear path for what comes next.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>

@@ -20,7 +20,7 @@ const Header: React.FC = () => (
         fontSize: '14px', color: 'rgba(255,255,255,0.75)', marginTop: '20px', fontWeight: 'normal',
       }}
       >
-        An engineering lab for systems, automation and infrastructure experiments.
+        Live products, reference systems, and infrastructure experiments.
       </p>
     </Banner>
   </div>
