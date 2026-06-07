@@ -55,7 +55,7 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
-              href="https://jch254.com/blog/i-stopped-rebuilding-the-same-system/"
+              href="https://jch254.com/blog/reference-architecture-minimal-reusable-system/"
               target="_blank"
               rel="noopener noreferrer"
             >
