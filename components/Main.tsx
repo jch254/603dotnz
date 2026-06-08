@@ -335,21 +335,31 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="https://github.com/jch254/discogs-market-monitor"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <CardImage src="img/Wax.jpeg" />
             </a>
-            <Heading>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://discogs.603.nz/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Discogs Wantlist Monitor
+                </a>
+              </Heading>
+              <Space auto />
               <a
                 href="https://github.com/jch254/discogs-market-monitor"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Discogs Wantlist Monitor
+                GitHub
               </a>
-            </Heading>
+            </Flex>
             <Text small>
               Automated system that monitors Discogs marketplace listings against
               a user&#39;s wantlist and surfaces local matches.
