@@ -348,7 +348,7 @@ const Main: React.FC = () => (
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Discogs Wantlist Monitor
+                  Discogs Monitor
                 </a>
               </Heading>
               <Space auto />
