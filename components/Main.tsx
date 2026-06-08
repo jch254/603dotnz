@@ -335,7 +335,7 @@ const Main: React.FC = () => (
           </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
-              href="/"
+              href="https://discogs.603.nz/"
               target="_blank"
               rel="noopener noreferrer"
             >
