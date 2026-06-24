@@ -103,8 +103,8 @@ const Main: React.FC = () => (
           Some are focused experiments around infrastructure, AI workflows, automation, or data movement.
         </p>
         <p style={{ fontSize: '20px' }}>
-          The shared goal is practical engineering:
-          build the thing, deploy it, understand the trade-offs, and leave a clear path for what comes next.
+          The throughline is the same: build the thing, ship it, and be honest about the trade-offs.
+          No demos that only run on my machine.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
