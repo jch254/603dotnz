@@ -55,6 +55,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/github-copilot-became-a-meter-in-my-editor/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Copilot Became a Meter Running in My Editor
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/reference-architecture-minimal-reusable-system/"
               target="_blank"
               rel="noopener noreferrer"
@@ -70,16 +80,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               Google, NZ Post and the Ghosts in Legacy Infrastructure
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/reality-is-still-contested/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Reality Is Still Contested
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
