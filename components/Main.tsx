@@ -55,6 +55,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/optimised-the-pair-out-of-pair-programming/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Even the People Who Build Claude Code Got Lonely
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/github-copilot-became-a-meter-in-my-editor/"
               target="_blank"
               rel="noopener noreferrer"
@@ -70,16 +80,6 @@ const Main: React.FC = () => (
               rel="noopener noreferrer"
             >
               I Stopped Rebuilding the Same System
-            </a>
-          </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/google-nzpost-and-internet-archaeology/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Google, NZ Post and the Ghosts in Legacy Infrastructure
             </a>
           </p>
           <p style={{ margin: '1.25rem 0 0' }}>
