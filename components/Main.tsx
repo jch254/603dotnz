@@ -39,7 +39,7 @@ const Main: React.FC = () => (
             backend services, APIs, infrastructure, automation, data pipelines, and the occasional UI.
             <br />
             <br />
-            My bias is toward systems that are small enough to understand and solid enough to run.
+            My bias is toward systems that are simple enough to understand and solid enough to run.
             I like explicit architecture, boring infrastructure, clear operational behaviour,
             and software that can evolve without becoming mysterious.
             <br />
