@@ -1,0 +1,140 @@
+/* Design tokens for jch254.com and 603.nz. The reasoning is in
+   docs/design/direction.md.
+
+   Every value below is copied from Namaste (src/frontend/src/styles/tokens.css
+   and landing.css), not approximated. Light is the default and dark is
+   [data-theme="dark"] on <html>, set before first paint by the inline script
+   in ThemeScript.astro. The two themes are tuned separately.
+
+   jch254.com holds the source of truth for src/styles/tokens.css, fonts.css,
+   base.css and primitives.css. 603.nz carries a copy of those four files. */
+
+:root {
+  /* Type. Two families with fixed jobs: sans for language, mono for data. */
+  --font-sans: 'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Spline Sans Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --text-1: 0.75rem;     /* 12px   mono: years, dates, stack lines, addresses */
+  --text-2: 0.8125rem;   /* 13px   section labels, sub lines, footer */
+  --text-3: 0.90625rem;  /* 14.5px navigation, buttons, index rows */
+  --text-4: 1rem;        /* 16px   index row names */
+  --text-body: 1.0625rem; /* 17px  body, row text, text links, site switch */
+  --text-5: 1.125rem;    /* 18px   lede */
+  --text-row: 1.25rem;   /* 20px   ledger row names */
+  --text-6: 1.5rem;      /* 24px   headings inside a post */
+  --text-7: 2rem;        /* 32px */
+  --text-8: 2.75rem;     /* 44px   h2, fluid from 28px */
+  --text-9: 4.125rem;    /* 66px   h1, fluid from 40px */
+
+  --weight-text: 450;
+  --weight-strong: 550;
+  --weight-display: 600; /* h1, h2, buttons */
+  --weight-title: 650;   /* row names, labels, the current site */
+
+  --leading: 1.4;
+  --leading-lede: 1.5;
+  --leading-body: 1.55;
+  --tracking-row: -0.015em;
+  --tracking-title: -0.025em;
+  --tracking-h2: -0.035em;
+  --tracking-display: -0.04em;
+
+  /* Space. 4px base. */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-ms: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 40px;
+  --space-3xl: 48px;
+  --space-4xl: 72px;
+
+  /* Page. */
+  --gutter: clamp(20px, 5vw, 72px);
+  --measure: 1296px;
+  --col-gap: 64px;
+  --section: clamp(72px, 9vw, 128px);
+  --header-h: 72px;
+
+  /* Controls. Pointer density by default, touch density below. */
+  --control-h: 40px;
+  --target: 44px;        /* the smallest touch target */
+
+  /* Ledger columns. */
+  --ledger-margin: 116px;
+  --ledger-name: 148px;
+
+  /* Shape. Three radii and no others. */
+  --radius: 4px;         /* controls, row hover, images in a post */
+  --radius-float: 10px;  /* screenshots */
+  --radius-node: 50%;    /* the node */
+
+  /* Motion. Two durations, opacity and colour only. */
+  --duration-fast: 120ms;
+  --duration-standard: 200ms;
+  --ease-standard: ease-out;
+
+  /* Colour, light. Lowest contrast across the surfaces each token sits on is
+     noted beside it. */
+  --page: #fbfbf8;       /* main surface */
+  --side: #f1f2ed;       /* code blocks */
+  --raise: #ffffff;      /* screenshot ground */
+  --hover: #eceee7;      /* row hover */
+  --field: #e7e9e2;      /* inline code */
+
+  --ink: #141a17;        /* 14.4:1 */
+  --ink-2: #3d4741;      /* 7.9:1 */
+  --ink-3: #5a655e;      /* 5.0:1, the smallest allowed text colour */
+  --on-ink: #fbfbf8;     /* text on an ink fill */
+
+  --rule: #dcdfd7;       /* hairline around images and under table rows */
+  --rule-2: #79827b;     /* 3.2:1, quiet link underlines */
+
+  --green: #2bb67d;      /* the node. Fills only in light: 2.5:1 as text */
+  --green-ink: #0b6e47;  /* 5.1:1, green text */
+  --on-green: #0d110f;
+
+  --alert: #ad3c1c;      /* 5.0:1 */
+  --alert-wash: #f6e4dc;
+
+  --lift: 0 0 0 1px var(--rule), 0 2px 4px rgba(20, 26, 23, 0.04), 0 28px 64px -20px rgba(20, 26, 23, 0.22);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --page: #141917;
+  --side: #0d110f;
+  --raise: #1d2421;
+  --hover: #1c2320;
+  --field: #1a211e;
+
+  --ink: #ecefe9;        /* 11.1:1 */
+  --ink-2: #bcc4bd;      /* 7.2:1 */
+  --ink-3: #8f9992;      /* 5.4:1 */
+  --on-ink: #0d110f;
+
+  --rule: #272f2b;
+  --rule-2: #66716b;     /* 3.1:1 */
+
+  --green: #2bb67d;      /* 6.1:1, so it also serves as text */
+  --green-ink: #2bb67d;
+  --on-green: #0d110f;
+
+  --alert: #f29a78;      /* 5.9:1 */
+  --alert-wash: #2e1f19;
+
+  /* Dark lifts by lightness. Nothing casts a shadow. */
+  --lift: 0 0 0 1px var(--rule);
+
+  color-scheme: dark;
+}
+
+/* Touch density. Controls reach 44px on a coarse pointer and on any narrow
+   window, which covers phones whose primary pointer reports as fine. */
+@media (pointer: coarse), (max-width: 720px) {
+  :root {
+    --control-h: 44px;
+  }
+}
