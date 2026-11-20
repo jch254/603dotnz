@@ -55,6 +55,16 @@ const Main: React.FC = () => (
           <p style={{ margin: '0.75rem 0' }}>
             {'→ '}
             <a
+              href="https://jch254.com/blog/studio-spotify-labs-would-not-name-its-model/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Studio by Spotify Labs Would Not Name Its Model but Its Log File Did
+            </a>
+          </p>
+          <p style={{ margin: '0.75rem 0' }}>
+            {'→ '}
+            <a
               href="https://jch254.com/blog/claude-session-survived-reinstall/"
               target="_blank"
               rel="noopener noreferrer"
@@ -72,16 +82,7 @@ const Main: React.FC = () => (
               The Way of Code Against Production
             </a>
           </p>
-          <p style={{ margin: '0.75rem 0' }}>
-            {'→ '}
-            <a
-              href="https://jch254.com/blog/optimised-the-pair-out-of-pair-programming/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Even the People Who Build Claude Code Got Lonely
-            </a>
-          </p>
+
           <p style={{ margin: '1.25rem 0 0' }}>
             <a
               href="https://jch254.com/blog"
@@ -107,6 +108,60 @@ const Main: React.FC = () => (
           No demos that only run on my machine.
         </p>
         <Flex align="center" justify="center" wrap gutter={2}>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://studio.603.nz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/Studio.png" />
+            </a>
+            <Heading>
+              <a
+                href="https://studio.603.nz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Studio
+              </a>
+            </Heading>
+            <Text small>
+              Browser-based DAW with timeline, piano roll, drum machine and mixer,
+              with AI-generated parts that land as ordinary editable clips.
+            </Text>
+          </Card>
+          <Card m={2} style={{ width: '309px', height: '333px' }}>
+            <a
+              href="https://03.quest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <CardImage src="img/03Quest.jpg" />
+            </a>
+            <Flex align="center">
+              <Heading>
+                <a
+                  href="https://03.quest"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  03 Quest
+                </a>
+              </Heading>
+              <Space auto />
+              <a
+                href="https://github.com/jch254/the-03"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </Flex>
+            <Text small>
+              Open-world crime sandbox for the browser, set in 1995 Canterbury, NZ.
+              Built with Three.js and Rapier, no backend.
+            </Text>
+          </Card>
           <Card m={2} style={{ width: '309px', height: '333px' }}>
             <a
               href="https://reference-architecture.603.nz/"
