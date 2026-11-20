@@ -114,7 +114,7 @@ const Main: React.FC = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              <CardImage src="img/StudioLanding.png" />
+              <CardImage src="img/StudioLanding.png?v=2" />
             </a>
             <Heading>
               <a
