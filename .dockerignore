@@ -1,0 +1,9 @@
+node_modules
+dist
+.astro
+.git
+.history
+.venv
+.DS_Store
+infrastructure
+Claude outputs
