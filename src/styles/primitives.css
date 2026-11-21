@@ -1,0 +1,777 @@
+/* Primitives: the parts every page on jch254.com and 603.nz is built from.
+   Page styles load after this file and may adjust layout, never colour or
+   shape. Class names follow Namaste where the part exists there. */
+
+/* ------------------------------------------------------------------ page */
+
+/* The measure: 1296px between two fluid gutters. */
+.wrap {
+  width: 100%;
+  max-width: calc(var(--measure) + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* A section in two columns. The modifier sets the columns. */
+.split {
+  display: grid;
+  column-gap: var(--col-gap);
+  align-items: start;
+}
+
+/* 620px at 1440 and wider, as drawn. Between 981px and 1440px the lead
+   column gives way so the ledger beside it keeps room for one line. */
+.split-lead {
+  grid-template-columns: minmax(0, clamp(440px, 43.06vw, 620px)) 1fr;
+}
+
+.split-head {
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  align-items: end;
+}
+
+.split-flow {
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+/* The top of a page: under the header, above the first list. */
+.page-head {
+  padding-block: 56px var(--space-4xl);
+}
+
+/* The left side of a long page stays in view while the right side scrolls.
+   Only where the window is tall enough to hold it. */
+@media (min-width: 981px) and (min-height: 720px) {
+  .sticky-side {
+    position: sticky;
+    top: var(--space-xl);
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.stack-tight {
+  gap: var(--space-lg);
+}
+
+/* ---------------------------------------------------------------- header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  height: var(--header-h);
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* The family mark. A background image, so only the file for the theme in use
+   is fetched. */
+.avatar {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius);
+  background: url('/avatar.webp') center / cover no-repeat;
+}
+
+[data-theme="dark"] .avatar {
+  background-image: url('/avatar-dark.webp');
+}
+
+/* The site switch names both domains. The current one carries the node and
+   the title weight, so the state never rests on colour alone. */
+.site-switch {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--text-body);
+  letter-spacing: -0.01em;
+}
+
+.site-switch a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-switch a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.site-switch a[aria-current] {
+  color: var(--ink);
+  font-weight: var(--weight-title);
+}
+
+.site-switch a[aria-current]::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
+  border-radius: var(--radius-node);
+  background: var(--green);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--text-3);
+}
+
+.site-nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.site-nav-links a:hover,
+.site-nav-links a[aria-current] {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--target);
+  height: var(--target);
+  margin-right: -12px;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--ink);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* The icon shows the theme a press will switch to. */
+.theme-toggle .icon-sun,
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+/* ------------------------------------------------------------------ type */
+
+.h1 {
+  font-size: clamp(2.5rem, 4.6vw, var(--text-9));
+  font-weight: var(--weight-display);
+  line-height: 1.02;
+  letter-spacing: var(--tracking-display);
+}
+
+/* Each line is its own block, broken where the sentence breathes. */
+.h1 span {
+  display: block;
+}
+
+.h2 {
+  font-size: clamp(1.75rem, 3.1vw, var(--text-8));
+  font-weight: var(--weight-display);
+  line-height: 1.06;
+  letter-spacing: var(--tracking-h2);
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 30em;
+  font-size: var(--text-5);
+  line-height: var(--leading-lede);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+.body {
+  max-width: 34em;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* A link inside a sentence. */
+.lede a,
+.body a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-underline-offset: 4px;
+}
+
+.lede a:hover,
+.body a:hover {
+  color: var(--green-ink);
+  text-decoration-color: currentColor;
+}
+
+/* --------------------------------------------------------------- buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--control-h);
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-3);
+  font-weight: var(--weight-display);
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+/* Primary is ink. Green is never a button colour. */
+.btn-primary {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.btn-primary:hover {
+  background: color-mix(in srgb, var(--ink) 86%, var(--page));
+}
+
+/* ----------------------------------------------------------------- links */
+
+/* Text link: the second action beside a button. */
+.link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: var(--ink);
+  font-size: var(--text-body);
+  font-weight: var(--weight-title);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.link:hover {
+  color: var(--green-ink);
+}
+
+/* Quiet link: addresses, the footer, Live and Source in the index. */
+.link-quiet {
+  color: var(--ink-2);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-2);
+  text-underline-offset: 4px;
+}
+
+.link-quiet:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+/* One primary button, then text links. */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 28px;
+}
+
+/* GitHub, LinkedIn and email, written as addresses. */
+.addresses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+}
+
+/* ------------------------------------------------------------------ node */
+
+/* The node means current: the site you are on, the job held now, a product
+   that is live. It always sits beside a word. */
+.node {
+  display: inline-block;
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-node);
+  background: var(--green);
+}
+
+/* A group inside a page: label and count, no rule. */
+.section-label {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  min-height: 28px;
+  font-size: var(--text-2);
+  font-weight: var(--weight-title);
+  line-height: 28px;
+  color: var(--ink);
+}
+
+.section-count {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  font-weight: 400;
+  color: var(--ink-3);
+}
+
+/* ---------------------------------------------------------------- ledger */
+
+/* The ledger. A row is a fixed grid: a mono margin that holds the one fact
+   the list is about, a name, one line of text. */
+.ledger {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  container-type: inline-size;
+}
+
+.ledger-row {
+  display: grid;
+  grid-template-columns: var(--ledger-margin) var(--ledger-name) minmax(0, 1fr);
+  align-items: baseline;
+  padding: 14px 0;
+}
+
+.ledger-margin {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--ink-3);
+}
+
+/* The current row takes the node in the left gutter. */
+.ledger-row-current .ledger-margin::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: var(--radius-node);
+  background: var(--green);
+}
+
+.ledger-name {
+  font-size: var(--text-row);
+  font-weight: var(--weight-title);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-row);
+}
+
+.ledger-name a {
+  position: relative;
+  text-decoration: none;
+}
+
+/* The name is one line of 20px type. This widens what a finger can hit to
+   44px without moving anything. */
+.ledger-name a::after {
+  content: '';
+  position: absolute;
+  inset: -10px 0;
+}
+
+.ledger-name a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+}
+
+.ledger-text {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.ledger-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--text-2);
+  line-height: var(--leading);
+  color: var(--ink-3);
+}
+
+/* A ledger in a column too narrow for three takes the two-column form it
+   has below 980px: the name over the text. */
+@container (max-width: 500px) {
+  .ledger-row {
+    grid-template-columns: var(--ledger-margin) minmax(0, 1fr);
+  }
+
+  .ledger-name,
+  .ledger-text {
+    grid-column: 2;
+  }
+}
+
+/* ------------------------------------------------------------- post list */
+
+/* A post is a ledger row whose fact is its date. The whole row is the link. */
+.posts {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.post-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--ledger-margin) minmax(0, 1fr);
+  align-items: baseline;
+  margin: 0 -10px;
+  padding: 14px 10px;
+  border-radius: var(--radius);
+}
+
+.post-row:hover {
+  background: var(--hover);
+}
+
+.post-row:has(a:focus-visible) {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.post-title {
+  font-size: var(--text-row);
+  font-weight: var(--weight-title);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-row);
+  text-wrap: balance;
+}
+
+.post-title a {
+  outline: 0;
+  text-decoration: none;
+}
+
+.post-title a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.post-text {
+  max-width: 34em;
+  margin-top: 4px;
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------- product */
+
+/* A featured product. The copy keeps the page's left edge and the
+   screenshot runs off the right edge of the window. */
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  column-gap: var(--col-gap);
+  align-items: start;
+  padding-left: max(var(--gutter), calc((100% - var(--measure)) / 2));
+  overflow-x: clip;
+}
+
+.product-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: var(--space-lg);
+}
+
+/* Node, status, year. The status is always written beside the node. */
+.status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  color: var(--ink-2);
+}
+
+.status-year {
+  margin-left: var(--space-ms);
+  color: var(--ink-3);
+}
+
+/* What it is built with, separated by middle dots. Every item carries a dot
+   before it and the list is clipped by a dot's width on the left, so a line
+   never starts with one, wrapped or not. */
+.stack-line {
+  --dot: calc(1ch + 14px);
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--dot));
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  color: var(--ink-3);
+  clip-path: inset(0 0 0 var(--dot));
+}
+
+.stack-line li::before {
+  content: '\00b7';
+  display: inline-block;
+  width: var(--dot);
+  text-align: center;
+}
+
+/* One treatment for every screenshot: 16:10, cropped from the top left,
+   10px on the left corners, the Namaste lift. */
+.shot {
+  width: max(100%, 960px);
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-float) 0 0 var(--radius-float);
+  overflow: hidden;
+  background: var(--raise);
+  box-shadow: var(--lift);
+}
+
+.shot picture {
+  display: block;
+  height: 100%;
+}
+
+.shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+/* ----------------------------------------------------------------- index */
+
+/* The compact index: year, name, one line, stack, links. */
+.index {
+  --index-stack: 300px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.index-row {
+  display: grid;
+  grid-template-columns: 72px 232px minmax(0, 1fr) var(--index-stack) 116px;
+  align-items: baseline;
+  min-height: var(--target);
+  margin: 0 -10px;
+  padding: 11px 10px;
+  border-radius: var(--radius);
+}
+
+.index-row:hover,
+.index-row:focus-within {
+  background: var(--hover);
+}
+
+.index-year {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+
+.index-name {
+  font-size: var(--text-4);
+  font-weight: var(--weight-title);
+  letter-spacing: -0.01em;
+}
+
+.index-text {
+  padding-right: var(--space-lg);
+  font-size: var(--text-3);
+  color: var(--ink-2);
+}
+
+/* An entry with no interface has no stack line and nothing to open. It
+   shows the line you would type to use it. The column is wider so the
+   longest command fits on one line. */
+.index-commands {
+  --index-stack: 332px;
+}
+
+.index-command {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+/* The image name stays in one piece. A narrow column breaks before it. */
+.index-command span {
+  display: inline-block;
+}
+
+.index-links {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  font-size: var(--text-3);
+}
+
+/* ---------------------------------------------------------------- footer */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 32px;
+  padding-block: 28px 40px;
+  font-size: var(--text-2);
+  color: var(--ink-3);
+}
+
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 20px;
+  list-style: none;
+}
+
+.site-footer-legal {
+  flex: 1 1 100%;
+}
+
+/* ----------------------------------------------------------------- narrow */
+
+@media (max-width: 980px) {
+  :root {
+    --ledger-margin: 104px;
+  }
+
+  .site-nav-links {
+    display: none;
+  }
+
+  .page-head {
+    padding-block: var(--space-xl) var(--space-3xl);
+  }
+
+  .split-lead,
+  .split-head,
+  .split-flow {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-xl);
+    align-items: start;
+  }
+
+  .ledger-row {
+    grid-template-columns: var(--ledger-margin) minmax(0, 1fr);
+  }
+
+  .ledger-name,
+  .ledger-text {
+    grid-column: 2;
+  }
+
+  .product {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: var(--space-xl);
+    padding-inline: var(--gutter) 0;
+  }
+
+  .product-copy {
+    padding: 0 var(--gutter) 0 0;
+  }
+
+  /* 680px on a phone, so the interface stays readable. On a wider window
+     the image still reaches the right edge. */
+  .shot {
+    width: max(100%, 680px);
+    max-width: none;
+  }
+
+  .index-row {
+    grid-template-columns: 56px minmax(0, 1fr);
+    row-gap: 2px;
+    padding-block: 14px 6px;
+  }
+
+  .index-row > :not(.index-year) {
+    grid-column: 2;
+  }
+
+  .index-text {
+    padding-right: 0;
+  }
+
+  .index-links {
+    justify-content: flex-start;
+  }
+
+  .index-links a,
+  .addresses a,
+  .site-footer-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target);
+  }
+
+  .addresses,
+  .site-footer-links {
+    row-gap: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .post-row {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 4px;
+  }
+}

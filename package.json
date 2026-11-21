@@ -1,15 +1,16 @@
 {
   "name": "603.nz",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "603.nz source code",
+  "type": "module",
   "scripts": {
-    "build": "tsc && mkdir -p dist && cross-env NODE_ENV=production static-react dist-ts/components/App.js > dist/index.html",
-    "build:ts": "tsc",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
     "docker:build": "docker build -t 603nz .",
     "docker:run": "docker run -p 8080:80 603nz",
-    "docker:dev": "pnpm run build && pnpm run docker:build && pnpm run docker:run",
-    "lint": "eslint components --ext .ts,.tsx || exit 0",
-    "lint:fix": "eslint --fix components --ext .ts,.tsx || exit 0"
+    "docker:dev": "pnpm run docker:build && pnpm run docker:run"
   },
   "author": "Jordan Hornblow <jordan@jch254.com>",
   "license": "MIT",
@@ -19,33 +20,6 @@
   },
   "packageManager": "pnpm@9.15.9",
   "dependencies": {
-    "moment": "^2.30.1",
-    "prop-types": "^15.8.1"
-  },
-  "devDependencies": {
-    "@types/node": "^22.9.0",
-    "@types/react": "^15.7.10",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^18.0.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "react": "^15.7.0",
-    "react-geomicons": "^2.1.0",
-    "rebass": "^0.3.4",
-    "reflexbox": "^2.2.3",
-    "static-react": "^3.2.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "astro": "^6.0.2"
   }
 }

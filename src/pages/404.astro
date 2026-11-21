@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found | 603.nz" noindex={true}>
+  <div class="wrap page-head not-found">
+    <div class="stack">
+      <p class="ledger-margin">404</p>
+      <h1 class="h1">
+        <span>This page</span>
+        <span>doesn't exist.</span>
+      </h1>
+      <p class="lede">Maybe it never did.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="/">Back home</a>
+        <a class="link" href="/#products">Products</a>
+        <a class="link" href="/#index">Index</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    min-height: 56vh;
+  }
+</style>

@@ -1,13 +1,23 @@
-node_modules
-npm-debug.log
+# build output
+dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+pnpm-debug.log*
+
+# macOS-specific files
 .DS_Store
-index.html
-w.history/
+
+.history/
+.venv/
+.codereview
+
 .terraform/
+.terraform*
 *.tfstate*
 *.tfplan*
-.venv/
-dist-ts/
-.history/
-.codereview
-.terraform*

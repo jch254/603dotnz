@@ -1,0 +1,37 @@
+---
+/**
+ * Shared footer. It repeats the page links because the header hides them
+ * below 980px, then gives the three addresses and the source.
+ */
+import { site } from '../../site';
+
+const year = new Date().getFullYear();
+const isExternal = (href: string) => href.startsWith('http');
+---
+
+<footer class="site-footer wrap">
+  <nav aria-label="Footer">
+    <ul class="site-footer-links">
+      {[...site.nav, ...site.footerLinks].map((link) => (
+        <li><a class="link-quiet" href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+
+  <ul class="addresses" aria-label="Contact">
+    {site.addresses.map((address) => (
+      <li>
+        <a
+          class="link-quiet"
+          href={address.href}
+          target={isExternal(address.href) ? '_blank' : undefined}
+          rel={isExternal(address.href) ? 'noopener noreferrer' : undefined}
+        >{address.label}</a>
+      </li>
+    ))}
+  </ul>
+
+  <p class="site-footer-legal">
+    &copy; {year} Jordan Hornblow. Built with <a class="link-quiet" href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>. <a class="link-quiet" href={site.source} target="_blank" rel="noopener noreferrer">Source on GitHub</a>.
+  </p>
+</footer>
