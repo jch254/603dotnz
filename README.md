@@ -18,7 +18,7 @@ Source code for <https://603.nz>.
 /
 ├── docs/design/         # Pointer to the shared design docs in the jch254.com repo
 ├── public/              # CNAME, favicons, og-default.png, avatars, theme.js
-│   ├── fonts/           # Schibsted Grotesk and Spline Sans Mono, self-hosted woff2
+│   ├── fonts/           # Schibsted Grotesk and Spline Sans Mono, self-hosted woff2: a small core file per face, then the full Latin files
 │   └── licenses/        # Their OFL licences
 ├── src/
 │   ├── assets/shots/    # Product screenshots, 2880 by 1800
@@ -58,7 +58,7 @@ Everything on the page comes from [`src/data/projects.ts`](src/data/projects.ts)
 
 Change those in jch254.com first, then copy them here. `src/site.ts` is the one file that differs. See [`docs/design/README.md`](docs/design/README.md) for the direction, the audit and the notes.
 
-The site sends a content security policy with `script-src 'self'`, so there are no inline scripts. The theme script is `public/theme.js`.
+The site sends a content security policy with `script-src 'self'`, so there are no inline scripts. The theme script is `public/theme.js`. Inline styles are allowed, and the build inlines the stylesheet (`inlineStylesheets` in `astro.config.mjs`) because there is only one page for it to serve.
 
 ## Prerequisites
 
