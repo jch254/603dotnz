@@ -2,7 +2,7 @@
 
 Source code for <https://603.nz>.
 
-603.nz answers "what has he built?": five live products, then an index of open-source projects and build tooling. The person, the blog and the resume live on its sibling, [jch254.com](https://jch254.com).
+603.nz answers "what has he built?": six live products, then an index of open-source projects and build tooling. The person, the blog and the resume live on its sibling, [jch254.com](https://jch254.com).
 
 ## Tech stack
 

@@ -9,6 +9,7 @@ import type { ImageMetadata } from 'astro';
 import studioShot from '../assets/shots/studio.png';
 import questShot from '../assets/shots/03-quest.jpg';
 import namasteShot from '../assets/shots/namaste.png';
+import talkboxShot from '../assets/shots/talkbox.png';
 import handscapeShot from '../assets/shots/handscape.png';
 import lushShot from '../assets/shots/lush-aural-treats.png';
 
@@ -87,6 +88,17 @@ export const products: Product[] = [
     primary: { label: 'Open Namaste', href: 'https://namasteapp.tech' },
     shot: namasteShot,
     shotAlt: 'The Namaste home page, with the Today view of the app showing seven tasks.',
+  },
+  {
+    name: 'Talkbox',
+    status: 'Invite only',
+    year: 2026,
+    description:
+      'Real-time spoken conversation with an LLM, in the browser. Say a sentence and a voice answers, with the speech-to-text, language model and text-to-speech providers each swappable and every turn timed stage by stage.',
+    stack: ['React', 'Web Audio', 'Node.js', 'WebSockets', 'ECS'],
+    primary: { label: 'Open Talkbox', href: 'https://talkbox.cloud' },
+    shot: talkboxShot,
+    shotAlt: 'Talkbox mid-conversation, in green terminal panels: the state reads Listening, captions show a question and the spoken reply, and the timings panel reads 1216 ms to first audio.',
   },
   {
     name: 'Handscape',
