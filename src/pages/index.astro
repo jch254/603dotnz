@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Product from '../components/Product.astro';
+import { products, index, quote } from '../data/projects';
 ---
 
 <BaseLayout title="603.nz | Projects by Jordan Hornblow">
@@ -14,4 +16,123 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="https://jch254.com">jch254.com</a>.
     </p>
   </section>
+
+  <section class="products" id="products" aria-label="Products">
+    {products.map((product, i) => <Product product={product} first={i === 0} />)}
+  </section>
+
+  <section class="wrap section" id="index" aria-labelledby="index-title">
+    <div class="split split-head index-head">
+      <h2 class="h2" id="index-title">Index</h2>
+      <p class="body">
+        Open-source projects and the build tooling behind them. Every entry links to a live demo,
+        its source or both.
+      </p>
+    </div>
+
+    {index.map((group) => (
+      <div class="index-group">
+        <h3 class="section-label">
+          {group.label} <span class="section-count">{group.entries.length}</span>
+        </h3>
+        <ul class:list={['index', group.entries.some((entry) => entry.command) && 'index-commands']}>
+          {group.entries.map((entry) => (
+            <li class="index-row">
+              <span class="index-year">{entry.year}</span>
+              <span class="index-name">{entry.name}</span>
+              <span class="index-text">{entry.text}</span>
+              {entry.stack && (
+                <ul class="stack-line" aria-label="Built with">
+                  {entry.stack.map((item) => <li>{item}</li>)}
+                </ul>
+              )}
+              {entry.command && <code class="index-command">{entry.command}</code>}
+              <span class="index-links">
+                {entry.live && (
+                  <a class="link-quiet" href={entry.live} target="_blank" rel="noopener noreferrer" aria-label={`${entry.name}, live`}>Live</a>
+                )}
+                {entry.source && (
+                  <a class="link-quiet" href={entry.source} target="_blank" rel="noopener noreferrer" aria-label={`${entry.name}, source`}>Source</a>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </section>
+
+  <section class="band" aria-label="A quote from Skepta">
+    <figure class="wrap band-inner">
+      <blockquote class="h2 band-quote">{quote.text}</blockquote>
+      <figcaption class="band-by">
+        <a href={quote.href} target="_blank" rel="noopener noreferrer">{quote.by}</a>
+      </figcaption>
+    </figure>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Five products read as a list: same side every time, one gap. */
+  .products {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(72px, 9vw, 128px);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .index-head {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .index-group + .index-group {
+    padding-top: var(--space-2xl);
+  }
+
+  .index-group .section-label {
+    margin-bottom: var(--space-xs);
+  }
+
+  /* The one inverted band, from Namaste: an ink ground, the quote in the
+     page colour. */
+  .band {
+    background: var(--ink);
+    color: var(--on-ink);
+  }
+
+  .band-inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding-block: clamp(64px, 8vw, 112px);
+  }
+
+  .band-quote {
+    max-width: 22em;
+  }
+
+  .band-by {
+    font-family: var(--font-mono);
+    font-size: var(--text-1);
+  }
+
+  .band-by a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--target);
+    color: color-mix(in srgb, var(--on-ink) 82%, var(--ink));
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--on-ink) 45%, var(--ink));
+    text-underline-offset: 4px;
+  }
+
+  .band-by a:hover {
+    color: var(--on-ink);
+    text-decoration-color: currentColor;
+  }
+
+  /* On the band the focus ring has to be the page colour to be seen. */
+  .band-by a:focus-visible {
+    outline-color: var(--on-ink);
+  }
+</style>

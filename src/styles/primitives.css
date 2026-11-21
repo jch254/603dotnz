@@ -565,6 +565,11 @@
   box-shadow: var(--lift);
 }
 
+.shot picture {
+  display: block;
+  height: 100%;
+}
+
 .shot img {
   width: 100%;
   height: 100%;
@@ -576,6 +581,7 @@
 
 /* The compact index: year, name, one line, stack, links. */
 .index {
+  --index-stack: 300px;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -583,7 +589,7 @@
 
 .index-row {
   display: grid;
-  grid-template-columns: 72px 232px minmax(0, 1fr) 300px 116px;
+  grid-template-columns: 72px 232px minmax(0, 1fr) var(--index-stack) 116px;
   align-items: baseline;
   min-height: var(--target);
   margin: 0 -10px;
@@ -613,6 +619,20 @@
   padding-right: var(--space-lg);
   font-size: var(--text-3);
   color: var(--ink-2);
+}
+
+/* An entry with no interface has no stack line and nothing to open. It
+   shows the line you would type to use it. The column is wider so the
+   longest command fits on one line. */
+.index-commands {
+  --index-stack: 332px;
+}
+
+.index-command {
+  font-family: var(--font-mono);
+  font-size: var(--text-1);
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
 }
 
 .index-links {

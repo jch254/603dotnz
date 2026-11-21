@@ -1,0 +1,51 @@
+---
+/**
+ * A featured product: status line, name, two sentences, stack line, one
+ * button and at most one text link, with its screenshot running off the
+ * right edge of the window.
+ */
+import { Picture } from 'astro:assets';
+import type { Product } from '../data/projects';
+
+interface Props {
+  product: Product;
+  /** The first product is in the first viewport, so its image is not lazy. */
+  first?: boolean;
+}
+
+const { product, first = false } = Astro.props;
+---
+
+<article class="product">
+  <div class="product-copy">
+    <p class="status">
+      <span class="node" aria-hidden="true"></span>
+      {product.status}
+      <span class="status-year">{product.year}</span>
+    </p>
+    <h2 class="h2">{product.name}</h2>
+    <p class="body">{product.description}</p>
+    <ul class="stack-line" aria-label="Built with">
+      {product.stack.map((item) => <li>{item}</li>)}
+    </ul>
+    <div class="actions">
+      <a class="btn btn-primary" href={product.primary.href} target="_blank" rel="noopener noreferrer">{product.primary.label}</a>
+      {product.secondary && (
+        <a class="link" href={product.secondary.href} target="_blank" rel="noopener noreferrer">{product.secondary.label}</a>
+      )}
+    </div>
+  </div>
+
+  <div class="shot">
+    <Picture
+      src={product.shot}
+      alt={product.shotAlt}
+      formats={['avif']}
+      fallbackFormat="webp"
+      widths={[680, 960, 1360, 1920]}
+      sizes="(max-width: 980px) 680px, max(960px, 45vw)"
+      loading={first ? 'eager' : 'lazy'}
+      fetchpriority={first ? 'high' : 'auto'}
+    />
+  </div>
+</article>
