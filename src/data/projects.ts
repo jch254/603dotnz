@@ -94,7 +94,7 @@ export const products: Product[] = [
     status: 'Invite only',
     year: 2026,
     description:
-      'Real-time spoken conversation with an LLM, in the browser. Say a sentence and a voice answers, with the speech-to-text, language model and text-to-speech providers each swappable and every turn timed stage by stage.',
+      'Real-time spoken conversation with an LLM, in the browser. Say a sentence and a voice answers, with a choice of language models and voices, and every turn timed stage by stage.',
     stack: ['React', 'Web Audio', 'Node.js', 'WebSockets', 'ECS'],
     primary: { label: 'Open Talkbox', href: 'https://talkbox.cloud' },
     shot: talkboxShot,
@@ -105,7 +105,7 @@ export const products: Product[] = [
     status: 'Live',
     year: 2026,
     description:
-      'A Korean hand acupressure app. It uses the phone camera to map fourteen points onto your hand, then guides each press, paced to your breath.',
+      'A Korean hand acupressure app. It draws each routine from the Korean Hand Therapy workbooks, cites the page behind every step, then guides each press, paced to your breath.',
     stack: ['React Native', 'React', 'NestJS', 'DynamoDB', 'Lambda'],
     primary: { label: 'Open Handscape', href: 'https://handscape.health' },
     shot: handscapeShot,
@@ -172,7 +172,7 @@ export const index: IndexGroup[] = [
       {
         year: 2016,
         name: 'Audio Insights',
-        text: 'Explores and charts your Spotify listening data.',
+        text: 'Your Spotify listening as an album-art mosaic, top artists and recommendations.',
         stack: ['React', 'Redux', 'Spotify API'],
         live: 'https://audio-insights.603.nz',
         source: 'https://github.com/jch254/audio-insights',
@@ -209,7 +209,7 @@ export const index: IndexGroup[] = [
 
 /** The quote that closes the page. */
 export const quote = {
-  text: "Everyday, bro, we've gotta stay battling, gotta stay fighting, gotta stay striving, gotta stay dreaming, gotta stay believing, gotta stay scheming...",
+  text: "Every day, bro, we've gotta stay battling, gotta stay fighting, gotta stay striving, gotta stay dreaming, gotta stay believing, gotta stay scheming...",
   by: 'Skepta',
   href: 'https://www.youtube.com/watch?v=BtpHbpuZT-c',
 };
