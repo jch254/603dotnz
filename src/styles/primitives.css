@@ -19,8 +19,10 @@
   align-items: start;
 }
 
+/* 620px at 1440 and wider, as drawn. Between 981px and 1440px the lead
+   column gives way so the ledger beside it keeps room for one line. */
 .split-lead {
-  grid-template-columns: minmax(0, 620px) 1fr;
+  grid-template-columns: minmax(0, clamp(440px, 43.06vw, 620px)) 1fr;
 }
 
 .split-head {
@@ -369,6 +371,7 @@
   display: flex;
   flex-direction: column;
   list-style: none;
+  container-type: inline-size;
 }
 
 .ledger-row {
@@ -438,6 +441,19 @@
   font-size: var(--text-2);
   line-height: var(--leading);
   color: var(--ink-3);
+}
+
+/* A ledger in a column too narrow for three takes the two-column form it
+   has below 980px: the name over the text. */
+@container (max-width: 500px) {
+  .ledger-row {
+    grid-template-columns: var(--ledger-margin) minmax(0, 1fr);
+  }
+
+  .ledger-name,
+  .ledger-text {
+    grid-column: 2;
+  }
 }
 
 /* ------------------------------------------------------------- post list */
@@ -635,6 +651,11 @@
   overflow-wrap: anywhere;
 }
 
+/* The image name stays in one piece. A narrow column breaks before it. */
+.index-command span {
+  display: inline-block;
+}
+
 .index-links {
   display: flex;
   justify-content: flex-end;
@@ -709,8 +730,10 @@
     padding: 0 var(--gutter) 0 0;
   }
 
+  /* 680px on a phone, so the interface stays readable. On a wider window
+     the image still reaches the right edge. */
   .shot {
-    width: 680px;
+    width: max(100%, 680px);
     max-width: none;
   }
 
